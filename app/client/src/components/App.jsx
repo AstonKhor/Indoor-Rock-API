@@ -9,6 +9,14 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    fetch('/indoorGyms')
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data);
+      })
+  }
+
   render() {
     return (
       <React.Fragment>
