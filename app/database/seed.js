@@ -18,8 +18,8 @@ const parseGyms = (gyms) => {
 }
 
 let parseArea = (area, country) => {
-  let countryInsertQuery = `INSERT INTO Countries (Name) VALUES ("${country}");`;
-  let gymInsertQuery = 'INSERT INTO Gyms (Name, Link, Website, Phone, Address, Subregion, Rating, Region, Country) VALUES ';
+  let countryInsertQuery = `INSERT INTO Countries (CountryName) VALUES ("${country}");`;
+  let gymInsertQuery = 'INSERT INTO Gyms (GymName, Link, Website, Phone, GymAddress, Subregion, Rating, Region, Country) VALUES ';
   for (let i = 0; i < area.gyms.length; i++) {
     let gym = area.gyms[i];
     gym.country = country;

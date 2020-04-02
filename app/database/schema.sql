@@ -5,21 +5,21 @@ CREATE DATABASE indoorGyms;
 USE indoorGyms;
 
 CREATE TABLE Countries(
-  Name VARCHAR(50) NOT NULL PRIMARY KEY
+  CountryName VARCHAR(50) NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE Gyms(
   Id INT AUTO_INCREMENT PRIMARY KEY,
-  Name VARCHAR(80) NOT NULL,
+  GymName VARCHAR(80) NOT NULL,
   Link VARCHAR(270) NOT NULL,
   Region VARCHAR(100),
   Website VARCHAR(270),
   Phone VARCHAR(40),
-  Address VARCHAR(200),
+  GymAddress VARCHAR(200),
   Subregion VARCHAR(50),
   Rating DECIMAL(2,1),
   Country VARCHAR(50),
-  FOREIGN KEY (Country) REFERENCES Countries(Name)
+  FOREIGN KEY (Country) REFERENCES Countries(CountryName)
 );
 
 -- CREATE TABLE Keys(
