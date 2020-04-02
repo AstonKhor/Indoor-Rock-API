@@ -15,21 +15,18 @@ const useStyles = makeStyles({
   },
 });
 
-let Search = ({ apiKey }) => {
+let SearchParams = ({ params }) => {
   let styles = useStyles();
+  console.log('params', params);
   return (
     <React.Fragment>      
-      <Autocomplete
-      id="combo-box-demo"
-      options={[]}
-      getOptionLabel={(option) => option.title}
-      style={{ width: 300 }}
-      renderInput={(params) => <TextField label="Combo box" variant="outlined" />}
-    />
+      {params.map((param) => {
+        return (<ParamChip param={param}/>);
+      })}
     </React.Fragment>
-  )
+  );
 }
 
-export default Search;
+export default SearchParams;
 
 

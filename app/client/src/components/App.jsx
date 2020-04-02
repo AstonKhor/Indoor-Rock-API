@@ -4,7 +4,7 @@ import Search from './Search';
 import Header from './Header';
 import { Container } from '@material-ui/core';
 import Results from './Results';
-import SearchParams from './SearchParams';
+import SearchParams from './ParamChip';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,7 +12,8 @@ class App extends React.Component {
     this.state = {
       user: 'Guest',
       key: '**Not Logged In**',
-      gyms: []
+      gyms: [],
+      searchParams: [{type: 'country', param: 'United States'}]
     }
   }
 
@@ -32,11 +33,11 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Header/>
+        <Header username={this.state.user}/>
         <HowTo apiKey={this.state.key}/>
         <Container>
           <Container>
-            <SearchParams></SearchParams>
+            <SearchParams params={this.state.searchParams}/>
             <Search></Search>
           </Container>
           <Results/>

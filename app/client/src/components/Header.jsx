@@ -19,8 +19,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header() {
+export default function Header({ username }) {
   const classes = useStyles();
+
+  let allowLogin = (user) => {
+    if (user === 'Guest') {
+      return <Button color="inherit">Login</Button>
+    } else {
+      return <Button color="inherit">Username</Button>
+    }
+  }
 
   return (
     <div className={classes.root}>
@@ -29,7 +37,7 @@ export default function Header() {
           <Typography variant="h6" className={classes.title}>
             IndoorRock API
           </Typography>
-          <Button color="inherit">Login</Button>
+          {allowLogin(username)}
         </Toolbar>
       </AppBar>
     </div>
