@@ -12,11 +12,11 @@ CREATE TABLE Gyms(
   Id INT AUTO_INCREMENT PRIMARY KEY,
   Name VARCHAR(80) NOT NULL,
   Link VARCHAR(270) NOT NULL,
-  Subregion VARCHAR(100),
+  Region VARCHAR(100),
   Website VARCHAR(270),
   Phone VARCHAR(40),
   Address VARCHAR(200),
-  Location VARCHAR(50),
+  Subregion VARCHAR(50),
   Rating DECIMAL(2,1),
   Country VARCHAR(50),
   FOREIGN KEY (Country) REFERENCES Countries(Name)
