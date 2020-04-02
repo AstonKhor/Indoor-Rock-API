@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
-import FaceIcon from '@material-ui/icons/Face';
-import DoneIcon from '@material-ui/icons/Done';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,23 +13,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-let ParamChip = ({ param }) => {
+let ParamChip = ({ param, removeParam }) => {
   const classes = useStyles();
-
-  const handleDelete = () => {
-    console.info('You clicked the delete icon.');
-  };
-
-  const handleClick = () => {
-    console.info('You clicked the Chip.');
-  };
-  console.log('param', param)
   return (
     <div className={classes.root}>
       <Chip
+        key={`${param.type}: ${param.param}`}
         label={`${param.type}: ${param.param}`}
-        onClick={handleClick}
-        onDelete={handleDelete}
+        onClick={() => {removeParam(param)}}
+        onDelete={() => {removeParam(param)}}
       />
     </div>
   );
