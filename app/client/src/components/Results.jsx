@@ -20,7 +20,6 @@ export default function Results({ gyms, params}) {
       }
     }
   }
-  console.log('gyms', resultGyms);
   return (
     <Grid container justify="center" spacing={2}>
       {resultGyms.map((gym) => (

@@ -2,7 +2,7 @@ import React from 'react';
 import HowTo from './HowTo';
 import Search from './Search';
 import Header from './Header';
-import { Container } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 import Results from './Results';
 import SearchParams from './SearchParams';
 
@@ -19,6 +19,7 @@ class App extends React.Component {
       subregions: new Set()
     }
     this.removeParam = this.removeParam.bind(this);
+    this.addParam = this.addParam.bind(this);
   }
 
   componentDidMount() {
@@ -30,11 +31,12 @@ class App extends React.Component {
         let regions = new Set();
         let subregions = new Set();
         for (let i = 0; i < gyms.length; i++) {
-          countries.add(gyms[i].country)
-          regions.add(gyms[i].subregions)
-          subregions.add(gyms[i].location)
+          countries.add(gyms[i].Country);
+          regions.add(gyms[i].Region);
+          subregions.add(gyms[i].Subregion);
         }
-
+        //update search component state
+        //then update this state
         this.setState({
           gyms: gyms,
           countries: countries,
@@ -47,8 +49,25 @@ class App extends React.Component {
       })
   }
 
-  removeParam(removeParam) {
-    let searchParams = this.state.searchParams.filter((param) => { return param !== removeParam});
+  addParam(param, type) {
+    let exists = false;
+    let searchParams = [];
+    for (let i = 0; i < this.state.searchParams.length; i++) {
+      if(this.state.searchParams[i].type === type && this.state.searchParams[i].param ===param) {
+        exists = true;
+        return;
+      }
+      searchParams.push({type: this.state.searchParams[i].type, param: this.state.searchParams[i].param })
+    }
+    searchParams.push({type: type, param: param })
+    this.setState({
+      searchParams: searchParams
+    })
+    
+  }
+
+  removeParam(clickedParam) {
+    let searchParams = this.state.searchParams.filter((param) => { return param !== clickedParam});
     this.setState({
       searchParams: searchParams
     })
@@ -62,7 +81,7 @@ class App extends React.Component {
         <Container>
           <Container>
             <SearchParams params={this.state.searchParams} removeParam={this.removeParam}/>
-            <Search countries={this.state.countries} regions={this.state.regions} subregions={this.state.subregions}></Search>
+            <Search countries={this.state.countries} regions={this.state.regions} subregions={this.state.subregions} addParam={this.addParam}></Search>
           </Container>
           <Results gyms={this.state.gyms} params={this.state.searchParams} countries={this.state.countries} regions={this.state.regions} subregions={this.state.subregions}/>
         </Container>

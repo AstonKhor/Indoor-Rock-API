@@ -18,7 +18,6 @@ const useStyles = makeStyles({
 
 let SearchParams = ({ params, removeParam }) => {
   let styles = useStyles();
-  console.log('params', params);
   return (
     <React.Fragment>
       {params.map((param) => (
