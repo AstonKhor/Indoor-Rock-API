@@ -80,7 +80,7 @@ class Search extends React.Component {
     })
   };
 
-  handleClose(e, callback = ()=>{}) {
+  handleClose(callback = ()=>{}) {
     this.setState({
       countriesAnchorEl: null,
       countriesOpen: false,
@@ -90,7 +90,6 @@ class Search extends React.Component {
   };
 
   render() {
-    console.log('props', this.props);
     return (
       <React.Fragment>
         {/* <Autocomplete

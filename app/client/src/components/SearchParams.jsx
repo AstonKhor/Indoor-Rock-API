@@ -21,7 +21,7 @@ let SearchParams = ({ params, removeParam }) => {
   return (
     <React.Fragment>
       {params.map((param) => (
-        <ParamChip param={param} removeParam={removeParam}/>
+        <ParamChip key={`${param.tpe}${param.param}`} param={param} removeParam={removeParam}/>
       ))}
     </React.Fragment>
   );
