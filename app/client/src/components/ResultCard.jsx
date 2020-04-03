@@ -46,7 +46,6 @@ export default function Results({ gym }) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  console.log(gym.Name);
   return (
     <Card className={classes.root}>
       <CardHeader

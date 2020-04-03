@@ -60,6 +60,7 @@ class App extends React.Component {
       searchParams.push({type: this.state.searchParams[i].type, param: this.state.searchParams[i].param })
     }
     searchParams.push({type: type, param: param })
+    console.log('here');
     this.setState({
       searchParams: searchParams
     })
