@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ResultCard from './ResultCard';
 import Pagination from '@material-ui/lab/Pagination';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 const useStyles = makeStyles((theme) => ({
   root: {
