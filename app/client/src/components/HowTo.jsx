@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
+import clsx from 'clsx';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
@@ -21,13 +22,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
   },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
+  moreInfo: {
+    margin: 'auto',
   },
   expand: {
     transform: 'rotate(0deg)',
-    marginLeft: 'auto',
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
@@ -35,16 +34,14 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
-  avatar: {
-    backgroundColor: red[500],
-  },
 }));
 
-let HowToUse = () => {
+const HowToUse = ({ apiKey }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
+    console.log()
     setExpanded(!expanded);
   };
 
@@ -55,17 +52,17 @@ let HowToUse = () => {
           <Typography variant="h4"> Requests </Typography>
           <Typography variant="h5"> HTTP Requests </Typography>
           <Typography variant="body1"> GET https://www.IndoorRockAPI.com/indoorgyms/api/json </Typography>
-          <Typography variant="body1" onClick={this.setExpanded}>MORE INFO</Typography>
           <CardActions disableSpacing>
             <IconButton
-              className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-              })}
+              className={classes.moreInfo}
               onClick={handleExpandClick}
               aria-expanded={expanded}
               aria-label="show more"
             >
-              <ExpandMoreIcon />
+              <Typography variant="body1">MORE INFO</Typography>
+              <ExpandMoreIcon className={clsx(classes.expand, {
+                [classes.expandOpen]: expanded,
+              })}/>
             </IconButton>
           </CardActions>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
@@ -96,7 +93,7 @@ let HowToUse = () => {
                         <br/>
                         The key parameter specifies the 36 character string associated with your account. It can be viewed on login.
                         <br/>
-                        <Button>{this.props.apiKey}</Button>
+                        <Button>{apiKey}</Button>
                       </TableCell>
                     </TableRow>
                     <TableRow>
