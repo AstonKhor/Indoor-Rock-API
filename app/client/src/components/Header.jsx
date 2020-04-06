@@ -8,6 +8,8 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    backgroundColor: '#5CDB95',
+    color: '#05386B',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -29,15 +31,13 @@ export default function Header({ username }) {
   }
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            IndoorRock API
-          </Typography>
-          {allowLogin(username)}
-        </Toolbar>
-      </AppBar>
-    </div>
+    <AppBar position="static" className={classes.root}>
+      <Toolbar>
+        <Typography variant="h6" className={classes.title}>
+          IndoorRock API
+        </Typography>
+        {allowLogin(username)}
+      </Toolbar>
+    </AppBar>
   );
 }
