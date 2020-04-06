@@ -26,7 +26,6 @@ class App extends React.Component {
     fetch('/indoorGyms/api/json')
       .then((resp) => resp.json())
       .then((gyms) => {
-        console.log('GET gyms', gyms);
         let countries = new Set();
         let regions = new Set();
         let subregions = new Set();
@@ -50,7 +49,6 @@ class App extends React.Component {
   }
 
   addParam(param, type) {
-    let exists = false;
     let searchParams = [];
     for (let i = 0; i < this.state.searchParams.length; i++) {
       if(this.state.searchParams[i].type === type && this.state.searchParams[i].param ===param) {
@@ -60,7 +58,6 @@ class App extends React.Component {
       searchParams.push({type: this.state.searchParams[i].type, param: this.state.searchParams[i].param })
     }
     searchParams.push({type: type, param: param })
-    console.log('here');
     this.setState({
       searchParams: searchParams
     })
