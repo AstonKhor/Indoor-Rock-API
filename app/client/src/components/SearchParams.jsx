@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import ParamChip from './ParamChip';
+import Button from '@material-ui/core/Button';
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -14,13 +15,46 @@ const useStyles = makeStyles({
   },
 });
 
-let SearchParams = ({ params, removeParam }) => {
+let SearchParams = ({ params, clearParams }) => {
   let styles = useStyles();
+
+  const renderCountry = (country) => {
+    if (country) {
+      //add some onclick function here
+      return <Typography variant="body1">
+        >> {country} 
+      </Typography>
+    }
+  }
+
+  const renderRegion = (region) => {
+    if (region) {
+      //add some onclick function here
+      return <Typography variant="body1">
+        >> {region} 
+      </Typography>
+    }
+  }
+
+  const renderSubregion = (subregion) => {
+    if (subregion) {
+      //add some onclick function here
+      return <Typography variant="body1">
+        >> {subregion} 
+      </Typography>
+    }
+  }
+
   return (
     <React.Fragment>
-      {params.map((param) => (
-        <ParamChip key={`${param.tpe}${param.param}`} param={param} removeParam={removeParam}/>
-      ))}
+      {renderCountry(params.country)}
+      {renderRegion(params.region)}
+      {renderSubregion(params.subregion)}
+      <Button 
+        variant="contained"
+        onClick={clearParams}>
+          Clear Search
+        </Button>
     </React.Fragment>
   );
 }

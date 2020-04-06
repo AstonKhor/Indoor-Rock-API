@@ -5,6 +5,7 @@ import Header from './Header';
 import Container from '@material-ui/core/Container';
 import Results from './Results';
 import SearchParams from './SearchParams';
+import Traversal from './Traversal';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,34 +14,43 @@ class App extends React.Component {
       user: 'Guest',
       key: 'Please Login or Signup to receive an API Key',
       gyms: [],
-      searchParams: [{type: 'Country', param: 'Argentina'}],
+      searchParams: {country: null, region: null, subregion: null},
+      locations: {},
       countries: new Set(),
       regions: new Set(),
       subregions: new Set()
     }
     this.removeParam = this.removeParam.bind(this);
     this.addParam = this.addParam.bind(this);
+    this.clearParams = this.clearParams.bind(this);
   }
 
   componentDidMount() {
     fetch('/indoorGyms/api/json')
       .then((resp) => resp.json())
       .then((gyms) => {
+        console.log('GYMS', gyms);
+        let locations = {};
         let countries = new Set();
         let regions = new Set();
         let subregions = new Set();
         for (let i = 0; i < gyms.length; i++) {
-          countries.add(gyms[i].Country);
-          regions.add(gyms[i].Region);
-          subregions.add(gyms[i].Subregion);
+          if (!locations[gyms[i].Country]) {
+            locations[gyms[i].Country] = {};
+          }
+          if (!locations[gyms[i].Country][gyms[i].Region]) {
+            locations[gyms[i].Country][gyms[i].Region] = {};
+          }
+          if(gyms[i].Subregion) {
+            locations[gyms[i].Country][gyms[i].Region][gyms[i].Subregion] = {}
+          }
         }
-        //update search component state
-        //then update this state
         this.setState({
           gyms: gyms,
-          countries: countries,
-          regions: regions,
-          subregions: subregions
+          locations: locations,
+          countries: Array.from(countries),
+          regions: Array.from(regions),
+          subregions: Array.from(subregions),
         })
       })
       .catch((err) => {
@@ -48,20 +58,18 @@ class App extends React.Component {
       })
   }
 
-  addParam(param, type) {
-    let searchParams = [];
-    for (let i = 0; i < this.state.searchParams.length; i++) {
-      if(this.state.searchParams[i].type === type && this.state.searchParams[i].param ===param) {
-        exists = true;
-        return;
-      }
-      searchParams.push({type: this.state.searchParams[i].type, param: this.state.searchParams[i].param })
-    }
-    searchParams.push({type: type, param: param })
+  addParam(value, type) {
+    let searchParams = Object.assign({}, this.state.searchParams);
+    searchParams[type] = value
     this.setState({
-      searchParams: searchParams
+      searchParams: searchParams,
     })
-    
+  }
+
+  clearParams() {
+    this.setState({
+      searchParams: {country: null, region: null, subregion: null},
+    })
   }
 
   removeParam(clickedParam) {
@@ -78,8 +86,8 @@ class App extends React.Component {
         <HowTo apiKey={this.state.key}/>
         <Container>
           <Container>
-            <SearchParams params={this.state.searchParams} removeParam={this.removeParam}/>
-            <Search countries={this.state.countries} regions={this.state.regions} subregions={this.state.subregions} addParam={this.addParam}></Search>
+            <SearchParams params={this.state.searchParams} clearParams={this.clearParams}/>
+            <Search addParam={this.addParam} params={this.state.searchParams} locations={this.state.locations}></Search>
           </Container>
           <Results gyms={this.state.gyms} params={this.state.searchParams} countries={this.state.countries} regions={this.state.regions} subregions={this.state.subregions}/>
         </Container>
