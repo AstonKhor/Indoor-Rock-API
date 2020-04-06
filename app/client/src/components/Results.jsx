@@ -1,52 +1,54 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ResultCard from './ResultCard';
 import Pagination from '@material-ui/lab/Pagination';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    '& > * + *': {
-      marginTop: theme.spacing(2),
-    },
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    margin: '0px 10px 10px',
+    borderRadius: 20,
+    padding: 10,
+    border: '2px solid black',
   },
+  pagination: {
+    display: 'flex',
+    alignSelf: 'center',
+  }
 }));
 
-export default function Results({ gyms, params}) {
-  const classes = useStyles();
-  const [page, setPage] = React.useState(1);
-  let resultGyms = [];
-  if (params.length === 0) {
-    resultGyms = gyms;
-  } else {
-    for(let i = 0; i < gyms.length; i++) {
-      for(let j = 0; j < params.length; j++) {
-        if(gyms[i][params[j].type] === params[j].param) {
-          resultGyms.push(gyms[i])
-          break;
-        }
-      }
-    }
+const ResultCardsContainer = withStyles({
+  root: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly'
   }
-  let pageGyms = [];
-  for (let i = 0; i < resultGyms.length; i++) {
-    if (i < page * 10 && i >= (page-1) * 10) {
-      pageGyms.push(resultGyms[i]);
-    }
-  }
+})(Container)
 
-  const handlePageChange = (event, value) => {
-    setPage(value);
-  };
+export default function Results({ selectedGyms, page, setPage }) {
+  const classes = useStyles();
+  let pageGyms = [];
+  for (let i = 0; i < selectedGyms.length; i++) {
+    if (i < page * 10 && i >= (page-1) * 10) {
+      pageGyms.push(selectedGyms[i]);
+    }
+  }
 
   return (
-    <Grid container justify="center" spacing={2}>
-      <Pagination count={Math.ceil(resultGyms.length / 10)} page={page} onChange={handlePageChange} />
-      {pageGyms.map((gym) => (
-        <Grid key={`${gym.Id}${gym.Country}`} item>
-          <ResultCard gym={gym}></ResultCard>
-        </Grid>
-      ))}
+    <Grid container className={classes.root} justify="center" spacing={2}>
+      <Pagination className={classes.pagination}count={Math.ceil(selectedGyms.length / 10)} page={page} onChange={setPage}/>
+      <ResultCardsContainer>
+        {pageGyms.map((gym) => (
+          <Grid key={`${gym.Id}${gym.Country}`} item>
+            <ResultCard gym={gym}></ResultCard>
+          </Grid>
+        ))}
+      </ResultCardsContainer>
     </Grid>
   );
 }
