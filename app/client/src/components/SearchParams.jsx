@@ -1,61 +1,65 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
 import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-    border: 0,
-    borderRadius: 3,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    color: 'white',
-    height: 48,
-    padding: '0 30px',
+    display: 'flex',
+    flexDirection: 'column',
+    borderRadius: 20,
+    marginBottom: 10,
+    padding: 10,
+    border: '2px solid black',
   },
 });
 
+const ParamContainer = withStyles({
+  root: {
+    height: 75,
+    display: 'flex',
+    flexDirection: 'column',
+  }
+})(Container);
+
 let SearchParams = ({ params, clearParams }) => {
-  let styles = useStyles();
+  let classes = useStyles();
 
   const renderCountry = (country) => {
-    if (country) {
-      //add some onclick function here
-      return <Typography variant="body1">
-        >> {country} 
-      </Typography>
-    }
+    country = country ? country : 'All';
+    return <Typography variant="body1" className={classes.listItem}>
+      Country: {country} 
+    </Typography>
   }
 
   const renderRegion = (region) => {
-    if (region) {
-      //add some onclick function here
-      return <Typography variant="body1">
-        >> {region} 
-      </Typography>
-    }
+    region = region ? region : 'All';
+    return <Typography variant="body1" className={classes.listItem}>
+      Region: {region} 
+    </Typography>
   }
 
   const renderSubregion = (subregion) => {
-    if (subregion) {
-      //add some onclick function here
-      return <Typography variant="body1">
-        >> {subregion} 
-      </Typography>
-    }
+    subregion = subregion ? subregion : 'All';
+    return <Typography variant="body1" className={classes.listItem}>
+      Subregion: {subregion} 
+    </Typography>
   }
 
   return (
-    <React.Fragment>
-      {renderCountry(params.country)}
-      {renderRegion(params.region)}
-      {renderSubregion(params.subregion)}
+    <Container className={classes.root}>
+      <ParamContainer>
+        {renderCountry(params.country)}
+        {renderRegion(params.region)}
+        {renderSubregion(params.subregion)}
+      </ParamContainer>
       <Button 
         variant="contained"
         onClick={clearParams}>
           Clear Search
         </Button>
-    </React.Fragment>
+    </Container>
   );
 }
 

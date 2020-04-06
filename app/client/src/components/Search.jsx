@@ -5,19 +5,23 @@ import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles({
   root: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-    border: 0,
-    borderRadius: 3,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    color: 'white',
-    height: 48,
-    padding: '0 30px',
+    display: 'flex',
+    flexDirection: 'column',
+    borderRadius: 20,
+    padding: 10,
+    border: '2px solid black',
+    color: '#05386B',
   },
+  listItem: {
+    '&:hover, &:focus': {
+      color: '#379683',
+      opcaity: 1,
+    }
+  }
 });
 
 const Search = ({ addParam, params, locations }) => {
   const classes = useStyles();
-  console.log(locations);
   let renderList = () => {
     if (!params.country) {
       let countries = Object.keys(locations);
@@ -27,14 +31,14 @@ const Search = ({ addParam, params, locations }) => {
           <Typography 
             variant="subtitle1" 
             key={`${country}SearchItem`}
-            onClick={() => {addParam(country, 'country')} }>
+            onClick={() => {addParam(country, 'country')} }
+            className={classes.listItem}>
             {country}
           </Typography>
         ))}
       </Container>)
     } else if (!params.region) {
       let regions = Object.keys(locations[params.country]);
-      console.log('regions', regions);
       return (<Container>
         <Typography variant="h5">Region</Typography>
         {regions.map((region)=> (
@@ -42,13 +46,12 @@ const Search = ({ addParam, params, locations }) => {
             variant="subtitle1" 
             key={`${region}SearchItem`}
             onClick={() => {addParam(region, 'region')} }>
-            {console.log('here', region)}{region}
+            {region}
           </Typography>
         ))}
       </Container>)
     } else if (!params.subregion) {
       let subregions = Object.keys(locations[params.country][params.region]);
-      console.log('subregions', subregions);
       return (<Container>
         <Typography variant="h5">SubRegion</Typography>
         {subregions.map((subregion)=> (
@@ -64,9 +67,9 @@ const Search = ({ addParam, params, locations }) => {
   }
 
   return (
-    <React.Fragment>
+    <Container className={classes.root}>
       {renderList()}
-    </React.Fragment>
+    </Container>
   )
 }
 
