@@ -25,7 +25,7 @@ app.get('/indoorGyms/api/json', routes.getGyms);
 app.post('/user', routes.postUser);
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'client/dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 });
 
 app.listen(port, () => { console.log(`Now listening on port ${port}`)})
