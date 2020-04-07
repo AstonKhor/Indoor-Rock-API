@@ -14,6 +14,4 @@ if (process.env.HEROKU) {
   });
 }
 
-connection.connect();
-
 module.exports = connection;
