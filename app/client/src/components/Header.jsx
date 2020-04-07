@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: '#5CDB95',
+    backgroundColor: '#EDF5E1',
     color: '#05386B',
   },
   menuButton: {

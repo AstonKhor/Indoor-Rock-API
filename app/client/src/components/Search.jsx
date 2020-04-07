@@ -9,15 +9,18 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     borderRadius: 20,
     padding: 10,
-    border: '2px solid black',
-    color: '#05386B',
+    backgroundColor: '#EDF5E1',
+    color: '#05386B'
   },
   listItem: {
     '&:hover, &:focus': {
       color: '#379683',
       opcaity: 1,
     }
-  }
+  },
+  listTitle: {
+    fontWeight: 'bold',
+  },
 });
 
 const Search = ({ addParam, params, locations }) => {
@@ -26,21 +29,21 @@ const Search = ({ addParam, params, locations }) => {
     if (!params.country) {
       let countries = Object.keys(locations);
       return (<Container>
-        <Typography variant="h5">Country</Typography>
+        <Typography variant="h5" className={classes.listTitle}>Country</Typography>
         {countries.map((country)=> (
           <Typography 
             variant="subtitle1" 
             key={`${country}SearchItem`}
             onClick={() => {addParam(country, 'country')} }
             className={classes.listItem}>
-            {country}
+            &emsp;{country}
           </Typography>
         ))}
       </Container>)
     } else if (!params.region) {
       let regions = Object.keys(locations[params.country]);
       return (<Container>
-        <Typography variant="h5">Region</Typography>
+        <Typography variant="h5" className={classes.listTitle}>Region</Typography>
         {regions.map((region)=> (
           <Typography 
             variant="subtitle1" 
@@ -53,7 +56,7 @@ const Search = ({ addParam, params, locations }) => {
     } else if (!params.subregion) {
       let subregions = Object.keys(locations[params.country][params.region]);
       return (<Container>
-        <Typography variant="h5">SubRegion</Typography>
+        <Typography variant="h5" className={classes.listTitle}>SubRegion</Typography>
         {subregions.map((subregion)=> (
           <Typography 
             variant="subtitle1" 

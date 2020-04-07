@@ -3,9 +3,20 @@ import HowTo from './HowTo';
 import Search from './Search';
 import Header from './Header';
 import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
 import { withStyles } from '@material-ui/core/styles';
 import Results from './Results';
 import SearchParams from './SearchParams';
+
+const AppContainer = withStyles({
+  root: {
+    margin: -8,
+    paddingBottom: 10,
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: '#8EE4AF',
+  }
+})(Box);
 
 const SearchAndResultsContainer = withStyles({
   root: {
@@ -131,7 +142,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <AppContainer>
         <Header username={this.state.user}/>
         <HowTo apiKey={this.state.key}/>
         <SearchAndResultsContainer>
@@ -141,7 +152,7 @@ class App extends React.Component {
           </SearchContainer>
           <Results selectedGyms={this.state.selectedGyms} page={this.state.resultPage} setPage={this.setPage}/>
         </SearchAndResultsContainer>
-      </React.Fragment>
+      </AppContainer>
     )
   }
 }

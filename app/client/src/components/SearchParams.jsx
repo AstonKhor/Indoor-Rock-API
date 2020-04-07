@@ -11,8 +11,12 @@ const useStyles = makeStyles({
     borderRadius: 20,
     marginBottom: 10,
     padding: 10,
-    border: '2px solid black',
+    backgroundColor: '#EDF5E1',
+    color: '#05386B'
   },
+  listItem: {
+    fontWeight: 'bold'
+,  }
 });
 
 const ParamContainer = withStyles({

@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
     margin: '0px 10px 10px',
     borderRadius: 20,
     padding: 10,
-    border: '2px solid black',
+    backgroundColor: '#EDF5E1',
+    color: '#05386B'
   },
   pagination: {
     display: 'flex',
