@@ -6,9 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon server/index.js",
-    "start:prod": "node server/index.js",
+    "start": "webpack --mode=production && node server/index.js",
     "build:dev": "webpack -w -d",
-    "build:prod": "webpack --mode=production",
     "seed": "mysql -u root < database/schema.sql && node ./database/seed.js"
   },
   "keywords": [],
