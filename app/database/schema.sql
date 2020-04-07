@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS indoorGyms;
+DROP DATABASE IF EXISTS heroku_a47c644aa249fa2;
 
-CREATE DATABASE indoorGyms;
+CREATE DATABASE heroku_a47c644aa249fa2;
 
-USE indoorGyms;
+USE heroku_a47c644aa249fa2;
 
 CREATE TABLE Countries(
   CountryName VARCHAR(50) NOT NULL PRIMARY KEY
