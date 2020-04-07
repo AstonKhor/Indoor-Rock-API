@@ -12,13 +12,14 @@ CREATE TABLE Gyms(
   Id INT AUTO_INCREMENT PRIMARY KEY,
   GymName VARCHAR(80) NOT NULL,
   Link VARCHAR(270) NOT NULL,
+  Country VARCHAR(50),
   Region VARCHAR(100),
+  Subregion VARCHAR(50),
   Website VARCHAR(270),
   Phone VARCHAR(40),
   GymAddress VARCHAR(200),
-  Subregion VARCHAR(50),
   Rating DECIMAL(2,1),
-  Country VARCHAR(50),
+  Description TEXT,
   FOREIGN KEY (Country) REFERENCES Countries(CountryName)
 );
 
@@ -30,5 +31,6 @@ CREATE TABLE Gyms(
 CREATE TABLE Users(
   Id INT AUTO_INCREMENT PRIMARY KEY,
   Username VARCHAR(36),
-  Salt INT,
+  Password VARCHAR(36),
+  Salt INT
 );
