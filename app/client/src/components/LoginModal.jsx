@@ -23,13 +23,13 @@ import Box from '@material-ui/core/Box';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
+  const classes = useStyles();
 
   return (
     <Typography
       component="div"
       role="tabpanel"
       hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
@@ -50,9 +50,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#EDF5E1',
     color: '#05386B',
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
   title: {
     flexGrow: 1,
   },
@@ -64,6 +61,9 @@ const useStyles = makeStyles((theme) => ({
   },
   dialog: {
     backgroundColor: '#edf5e1',
+  },
+  tab: {
+    backgroundColor: '#e8e8e8',
   }
 }));
 
@@ -87,9 +87,9 @@ export default function Header({ open, handleClose }) {
       <DialogContent className={classes.dialog}>
         <div className={classes.root}>
           <AppBar position="static">
-            <Tabs value={value} onChange={handleTabChange} aria-label="simple tabs example">
-              <Tab label="Login" {...a11yProps(0)} />
-              <Tab label="Sign Up" {...a11yProps(1)} />
+            <Tabs value={value} onChange={handleTabChange} indicatorColor="primary" textColor="primary" aria-label="simple tabs example">
+              <Tab label="Login" {...a11yProps(0)} className={classes.tab}/>
+              <Tab label="Sign Up" {...a11yProps(1)} className={classes.tab}/>
             </Tabs>
           </AppBar>
           <TabPanel value={value} index={0}>
@@ -115,7 +115,7 @@ export default function Header({ open, handleClose }) {
                   <Checkbox
                     color="primary"
                   />
-                } label="Remember me" />
+                } label="Remember" />
               </Grid>
               <Grid item>
                 <Button disableFocusRipple disableRipple style={{ textTransform: "none" }} variant="text" color="primary">Forgot password ?</Button>
