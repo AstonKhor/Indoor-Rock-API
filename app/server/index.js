@@ -11,7 +11,7 @@ app.get('/indoorGyms/api/json', routes.getGyms);
 
 app.post('/user', routes.postUser);
 
-if(port === null || port === '') {
+if(port === null || port === '' || port === undefined) {
   port = 3000;
 }
 
