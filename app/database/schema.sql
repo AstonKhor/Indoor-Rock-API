@@ -27,7 +27,8 @@ CREATE TABLE Gyms(
 --   key VARCHAR(36)
 -- );
 
--- CREATE TABLE Users(
---   Id INT AUTO_INCREMENT PRIMARY KEY,
---   name VARCHAR(36)
--- );
+CREATE TABLE Users(
+  Id INT AUTO_INCREMENT PRIMARY KEY,
+  Username VARCHAR(36),
+  Salt INT,
+);
