@@ -1,104 +1,87 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
+import cx from 'clsx';
+import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import Rating from '@material-ui/lab/Rating';
+import { useOverShadowStyles } from '@mui-treasury/styles/shadow/over';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
-  },
-  expand: {
-    transform: 'rotate(0deg)',
+    width: 200,
+    margin: 5,
+    borderRadius: 16, // 16px
+    transition: '0.3s',
+    boxShadow: '0px 14px 80px rgba(34, 35, 58, 0.2)',
+    position: 'relative',
+    maxWidth: 500,
     marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-  },
-  avatar: {
-    backgroundColor: red[500],
+    overflow: 'initial',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
 }));
 
 export default function Results({ gym }) {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
+  const shadowStyles = useOverShadowStyles();
+  
+  const renderWebsite = () => {
+    if (gym.Website) {
+      return <a href={gym.Website}>Website</a>
+    }
+  }
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  const renderPhone = () => {
+    if (gym.Phone) {
+    return <Typography variant="body1" component="div">{gym.Phone}</Typography>
+    }
+  }
+
+  const renderAddress = () => {
+    if (gym.Address) {
+      return <Typography variant="body1" component="div">{gym.Address}</Typography>
+    }
+  }
+
+  const renderRating = () => {
+    if (gym.Rating) {
+      return <Rating
+      name="simple-controlled"
+      value={gym.Rating}
+      onChange={(event, newValue) => {
+        console.log('adding ratings not yet implemented');
+      }}
+    />
+    }
+  }
+  console.log(gym);
   return (
-    <Card className={classes.root}>
-      <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={gym.GymName}
-        subheader={gym.Country}
-      />
-      <CardMedia
-        className={classes.media}
-        image="/static/images/cards/paella.jpg"
-        title="Gym Image"
-      />
+    <Card className={cx(classes.root, shadowStyles.root)} variant="outlined">
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          Other info
+        <Typography variant="h5" component="h2">
+        {gym.GymName}
+        </Typography>
+        <Typography className={classes.pos} color="textSecondary">
+          {renderWebsite()}
+          {renderPhone()}
+          {renderAddress()}
+          {renderRating()}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Description
+        </Typography>
+        <Typography variant="body2" component="p">
+          description--
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
+      <CardActions>
+        <Button size="small">Learn More</Button>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
-          </Typography>
-        </CardContent>
-      </Collapse>
     </Card>
   );
 }

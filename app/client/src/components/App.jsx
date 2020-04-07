@@ -20,11 +20,11 @@ const AppContainer = withStyles({
 
 const SearchAndResultsContainer = withStyles({
   root: {
-    marginTop: 10,
+    margin: '10px 70px',
     display: 'flex',
     flexDirection: 'row',
   }
-})(Container);
+})(Box);
 
 const SearchContainer = withStyles({
   root: {
@@ -32,7 +32,7 @@ const SearchContainer = withStyles({
     flexDirection: 'column',
     width: 400,
   }
-})(Container);
+})(Box);
 
 class App extends React.Component {
   constructor(props) {
