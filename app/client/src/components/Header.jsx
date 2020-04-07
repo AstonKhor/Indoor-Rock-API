@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import LoginModal from './LoginModal';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,14 +18,29 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  margin: {
+    margin: 16,
+  },
+  padding: {
+    padding: 8,
+  }
 }));
 
 export default function Header({ username }) {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClickClose = () => {
+    setOpen(false);
+  };
 
   let allowLogin = (user) => {
     if (user === 'Guest') {
-      return <Button color="inherit">Login</Button>
+      return <Button color="inherit" onClick={handleClickOpen}>Login</Button>
     } else {
       return <Button color="inherit">Username</Button>
     }
@@ -37,6 +53,7 @@ export default function Header({ username }) {
           IndoorRock API
         </Typography>
         {allowLogin(username)}
+        <LoginModal open={open} handleClickOpen={handleClickOpen} handleClose={handleClickClose}/>
       </Toolbar>
     </AppBar>
   );
