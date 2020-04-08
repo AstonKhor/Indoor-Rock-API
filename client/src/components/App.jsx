@@ -3,10 +3,12 @@ import HowTo from './HowTo';
 import Search from './Search';
 import Header from './Header';
 import Container from '@material-ui/core/Container';
+import cookieParser from 'cookie-parser';
 import Box from '@material-ui/core/Box';
 import { withStyles } from '@material-ui/core/styles';
 import Results from './Results';
 import SearchParams from './SearchParams';
+import getCookie from '../methods/getCookie';
 
 const AppContainer = withStyles({
   root: {
@@ -14,7 +16,7 @@ const AppContainer = withStyles({
     paddingBottom: 10,
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#8EE4AF',
+    backgroundColor: 'white',
   }
 })(Box);
 
@@ -50,6 +52,7 @@ class App extends React.Component {
     this.addParam = this.addParam.bind(this);
     this.clearParams = this.clearParams.bind(this);
     this.setPage = this.setPage.bind(this);
+    this.checkSession = this.checkSession.bind(this);
   }
 
   componentDidMount() {
@@ -74,7 +77,7 @@ class App extends React.Component {
           gyms: gyms,
           selectedGyms: gyms,
           locations: locations,
-        })
+        }, this.checkSession)
       })
       .catch((err) => {
         throw err;
@@ -88,6 +91,41 @@ class App extends React.Component {
       searchParams: searchParams,
     }, this.updateSelectedGyms);
   }
+
+  authenticateUser() {
+    let username = document.getElementById('loginUsername').value;
+    let password = document.getElementById('loginPassword').value;
+    fetch(`/login?username=${username}&password=${password}`)
+      .then((resp) => {
+        console.log(resp);
+        if(resp.status === 200) {
+          this.checkSession()
+        }
+        return resp.json()})
+      .then((data) => {
+        console.log('login resp', data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
+
+  checkSession() {
+    console.log('here');
+    let sessionKey = getCookie('sessionKey');
+    if (sessionKey) {
+      fetch(`/checkSession?sessionKey=${sessionKey}`)
+        .then((resp) => resp.json())
+        .then((data) => {
+          console.log('check sess', data);
+          this.setState({
+            user: data.username
+          }, () => {
+            console.log(this.state.user);
+          })
+        })
+    }
+  }
   
   clearParams() {
     this.setState({
@@ -95,8 +133,27 @@ class App extends React.Component {
     }, this.updateSelectedGyms);
   }
 
-  createAccount(name, password, email) {
-    console.log('creating account!');
+  createAccount() {
+    console.log(document.getElementById('username').value);
+    let bodyData = {
+      username: document.getElementById('username').value,
+      password: document.getElementById('password').value,
+      email: document.getElementById('email').value,
+    }
+    fetch('/user', 
+      {
+        method: 'POST', 
+        body: JSON.stringify(bodyData), 
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
   }
 
   removeParam(clickedParam) {
@@ -148,7 +205,7 @@ class App extends React.Component {
   render() {
     return (
       <AppContainer>
-        <Header username={this.state.user} createAccount={this.createAccount}/>
+        <Header username={this.state.user} authenticateUser={this.authenticateUser} createAccount={this.createAccount}/>
         <HowTo apiKey={this.state.key}/>
         <SearchAndResultsContainer>
           <SearchContainer>

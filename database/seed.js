@@ -1,4 +1,4 @@
-process.env.HEROKU=true;
+// process.env.HEROKU=true;
 const db = require('./index');
 const fs = require('fs');
 
@@ -64,4 +64,4 @@ let callback = () => {
   process.exit();
 }
 
-setTimeout(callback, 3000);
+setTimeout(callback, 10000);

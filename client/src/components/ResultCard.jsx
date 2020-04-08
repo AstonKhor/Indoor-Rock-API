@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import Rating from '@material-ui/lab/Rating';
-import { useOverShadowStyles } from '@mui-treasury/styles/shadow/over';
+// import { useOverShadowStyles } from '@mui-treasury/styles/shadow/over';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Results({ gym }) {
   const classes = useStyles();
-  const shadowStyles = useOverShadowStyles();
+  // const shadowStyles = useOverShadowStyles();
   
   const renderWebsite = () => {
     if (gym.website) {
@@ -52,7 +52,7 @@ export default function Results({ gym }) {
     if (gym.rating) {
       return <Rating
       name="simple-controlled"
-      value={gym.rating}
+      value={parseFloat(gym.rating)}
       onChange={(event, newValue) => {
         console.log('adding ratings not yet implemented');
       }}
@@ -60,12 +60,12 @@ export default function Results({ gym }) {
     }
   }
   return (
-    <Card className={cx(classes.root, shadowStyles.root)} variant="outlined">
+    <Card className={cx(classes.root)} variant="outlined">
       <CardContent>
         <Typography variant="h5" component="h2">
         {gym.gymname}
         </Typography>
-        <Typography className={classes.pos} color="textSecondary">
+        <Typography className={classes.pos} color="textSecondary" component="div">
           {renderWebsite()}
           {renderPhone()}
           {renderAddress()}

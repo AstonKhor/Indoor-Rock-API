@@ -1,12 +1,17 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const bodyParser = require('body-parser');
 const routes = require('./routes/routes.js');
 let port = process.env.PORT || 3000;
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
 app.use(cors());
+app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -18,11 +23,14 @@ app.use((req, res, next) => {
   next();
 });
 
-// process.env.PWD = process.cwd();
 app.use('/', express.static(path.join(__dirname, '../client/dist')));
+
+app.get('/checkSession', routes.checkSession);
 
 app.get('/indoorGyms/api/json', routes.getGyms);
 
-app.post('/user', routes.postUser);
+app.get('/login', routes.authenticateUser)
+
+app.post('/user', routes.createUser);
 
 app.listen(port, () => { console.log(`Now listening on port ${port}`)})

@@ -29,6 +29,7 @@
     "@mui-treasury/styles": "^1.1.0",
     "babel-loader": "^8.0.6",
     "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "css-loader": "^3.4.2",
     "cx": "^20.1.9",

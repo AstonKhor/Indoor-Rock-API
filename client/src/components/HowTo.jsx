@@ -70,7 +70,7 @@ const HowToUse = ({ apiKey }) => {
       <Card className={classes.card}>
         <CardContent>
           <Typography variant="h4"> About </Typography>
-          <Typography variant="h5"> IndoorRock is an open API for easy access to scraped data on indoor rock climbing gyms across the world </Typography>
+          <Typography variant="body1"> IndoorRock is an open API for easy access to scraped data on indoor rock climbing gyms across the world </Typography>
           
           <Typography variant="h4"> Requests </Typography>
           <Typography variant="h5"> HTTP Requests </Typography>

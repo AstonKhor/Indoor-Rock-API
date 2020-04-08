@@ -74,7 +74,7 @@ function a11yProps(index) {
   };
 }
 
-export default function Header({ open, handleClose, createAccount }) {
+export default function Header({ open, handleClose, authenticateUser, createAccount }) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -85,7 +85,7 @@ export default function Header({ open, handleClose, createAccount }) {
   return (
     <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
       <DialogContent className={classes.dialog}>
-        <div className={classes.root}>
+        <Box className={classes.root}>
           <AppBar position="static">
             <Tabs value={value} onChange={handleTabChange} indicatorColor="primary" textColor="primary" aria-label="simple tabs example">
               <Tab label="Login" {...a11yProps(0)} className={classes.tab}/>
@@ -98,7 +98,7 @@ export default function Header({ open, handleClose, createAccount }) {
                 <Face />
               </Grid>
               <Grid item md={true} sm={true} xs={true}>
-                <TextField id="username" label="Username" type="email" fullWidth autoFocus required />
+                <TextField id="loginUsername" label="Username" type="email" fullWidth autoFocus required />
               </Grid>
             </Grid>
             <Grid container spacing={8} alignItems="flex-end">
@@ -106,7 +106,7 @@ export default function Header({ open, handleClose, createAccount }) {
                 <Fingerprint />
               </Grid>
               <Grid item md={true} sm={true} xs={true}>
-                <TextField id="username" label="Password" type="password" fullWidth required />
+                <TextField id="loginPassword" label="Password" type="password" fullWidth required />
               </Grid>
             </Grid>
             <Grid container alignItems="center" justify="space-between">
@@ -122,7 +122,7 @@ export default function Header({ open, handleClose, createAccount }) {
               </Grid>
             </Grid>
             <Grid container justify="center" style={{ marginTop: '10px' }}>
-              <Button variant="outlined" color="primary" style={{ textTransform: "none" }}>Login</Button>
+              <Button variant="outlined" color="primary" style={{ textTransform: "none" }} onClick={authenticateUser}>Login</Button>
             </Grid>
           </TabPanel>
           <TabPanel value={value} index={1}>
@@ -154,7 +154,7 @@ export default function Header({ open, handleClose, createAccount }) {
               <Button variant="outlined" color="primary" style={{ textTransform: "none" }} onClick={createAccount}>Sign Up</Button>
             </Grid>
           </TabPanel>
-        </div>
+        </Box>
       </DialogContent>
     </Dialog> 
   );

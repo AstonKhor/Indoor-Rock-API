@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,14 +17,14 @@ const useStyles = makeStyles((theme) => ({
 let ParamChip = ({ param, removeParam }) => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <Box className={classes.root}>
       <Chip
         key={`${param.type}: ${param.param}`}
         label={`${param.type}: ${param.param}`}
         onClick={() => {removeParam(param)}}
         onDelete={() => {removeParam(param)}}
       />
-    </div>
+    </Box>
   );
 }
 

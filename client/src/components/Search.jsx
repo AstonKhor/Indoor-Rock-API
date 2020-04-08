@@ -48,7 +48,8 @@ const Search = ({ addParam, params, locations }) => {
           <Typography 
             variant="subtitle1" 
             key={`${region}SearchItem`}
-            onClick={() => {addParam(region, 'region')} }>
+            onClick={() => {addParam(region, 'region')} }
+            className={classes.listItem}>
             {region}
           </Typography>
         ))}
@@ -61,7 +62,8 @@ const Search = ({ addParam, params, locations }) => {
           <Typography 
             variant="subtitle1" 
             key={`${subregion}SearchItem`}
-            onClick={() => {addParam(subregion, 'subregion')} }>
+            onClick={() => {addParam(subregion, 'subregion')} }
+            className={classes.listItem}>
             {subregion}
           </Typography>
         ))}
