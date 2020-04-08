@@ -11,6 +11,10 @@
     "dbseed": "psql postgres -a -q -f database/schema.sql && sleep 3 && node ./database/seed.js",
     "seed": "node ./database/seed.js"
   },
+  "engines": {
+    "node": "8.17.0",
+    "npm": "6.13.4"
+  }, 
   "keywords": [],
   "author": "",
   "license": "ISC",
