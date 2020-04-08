@@ -87,7 +87,7 @@ class App extends React.Component {
       searchParams: searchParams,
     }, this.updateSelectedGyms);
   }
-
+  
   clearParams() {
     this.setState({
       searchParams: {country: null, region: null, subregion: null},

@@ -8,7 +8,7 @@
     "start:dev": "nodemon server/index.js",
     "start": "webpack --mode=production && node server/index.js",
     "build:dev": "webpack -w -d",
-    "seed": "mysql -u root < database/schema.sql && node ./database/seed.js"
+    "seed": "psql postgres -a -q -f database/schema.sql && sleep 3 && node ./database/seed.js"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +32,7 @@
     "node-sass": "^4.13.1",
     "nodemon": "^2.0.1",
     "password-hash": "^1.2.2",
+    "pg": "^8.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-lazy-load-image-component": "^1.4.1",

@@ -151,7 +151,7 @@ export default function Header({ open, handleClose }) {
               </Grid>
             </Grid>
             <Grid container justify="center" style={{ marginTop: '10px' }}>
-              <Button variant="outlined" color="primary" style={{ textTransform: "none" }}>Sign Up</Button>
+              <Button variant="outlined" color="primary" style={{ textTransform: "none" }} onClick={createAccount}>Sign Up</Button>
             </Grid>
           </TabPanel>
         </div>
