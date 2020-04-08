@@ -57,16 +57,17 @@ class App extends React.Component {
       .then((resp) => resp.json())
       .then((gyms) => {
         console.log('GYMS', gyms);
+        gyms = gyms.rows;
         let locations = {};
         for (let i = 0; i < gyms.length; i++) {
-          if (!locations[gyms[i].Country]) {
-            locations[gyms[i].Country] = {};
+          if (!locations[gyms[i].country]) {
+            locations[gyms[i].country] = {};
           }
-          if (!locations[gyms[i].Country][gyms[i].Region]) {
-            locations[gyms[i].Country][gyms[i].Region] = {};
+          if (!locations[gyms[i].country][gyms[i].region]) {
+            locations[gyms[i].country][gyms[i].region] = {};
           }
-          if(gyms[i].Subregion) {
-            locations[gyms[i].Country][gyms[i].Region][gyms[i].Subregion] = {}
+          if(gyms[i].subregion) {
+            locations[gyms[i].country][gyms[i].region][gyms[i].subregion] = {}
           }
         }
         this.setState({
@@ -122,15 +123,15 @@ class App extends React.Component {
           selectedGyms: gyms,
         })
       } else {
-        if (gyms[i].Country === params.country) {
+        if (gyms[i].country === params.country) {
           if (!params.region) {
             selectedGyms.push(gyms[i]);
           } else {
-            if (gyms[i].Region === params.region) {
+            if (gyms[i].region === params.region) {
               if (!params.subregion) {
                 selectedGyms.push(gyms[i]);
               } else {
-                if (gyms[i].Subregion === params.subregion) {
+                if (gyms[i].subregion === params.subregion) {
                   selectedGyms.push(gyms[i]);
                 }
               }

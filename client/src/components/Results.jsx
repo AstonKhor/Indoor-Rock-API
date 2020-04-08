@@ -45,7 +45,7 @@ export default function Results({ selectedGyms, page, setPage }) {
       <Pagination className={classes.pagination}count={Math.ceil(selectedGyms.length / 10)} page={page} onChange={setPage}/>
       <ResultCardsContainer>
         {pageGyms.map((gym) => (
-          <Grid key={`${gym.Id}${gym.Country}`} item>
+          <Grid key={`${gym.id}${gym.country}`} item>
             <ResultCard gym={gym}></ResultCard>
           </Grid>
         ))}

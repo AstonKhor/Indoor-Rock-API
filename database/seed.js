@@ -1,5 +1,7 @@
+process.env.HEROKU=true;
 const db = require('./index');
 const fs = require('fs');
+
 
 const parseGyms = (gyms) => {
   let gym = {};
@@ -48,7 +50,7 @@ let insertGyms = (gymQuery, country) => {
   
 }
   
-fs.readFile('../scraper/data/data.json', (err, data) => {
+fs.readFile('scraper/data/data.json', (err, data) => {
   if (err) throw err;
   // console.log('dat', data);
   let json = JSON.parse(data);
@@ -58,9 +60,8 @@ fs.readFile('../scraper/data/data.json', (err, data) => {
 
 let callback = () => {
   console.log('here');
-  db.end().then(() => {
-    process.exit();
-  })
+  db.end()
+  process.exit();
 }
 
 setTimeout(callback, 3000);

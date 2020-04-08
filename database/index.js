@@ -7,6 +7,7 @@ const connection = new Pool({
   password : config.password,
   database : config.database,
   port: 5432,
+  ssl: { rejectUnauthorized: false }
 })
 connection.connect();
 

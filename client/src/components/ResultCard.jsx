@@ -31,40 +31,39 @@ export default function Results({ gym }) {
   const shadowStyles = useOverShadowStyles();
   
   const renderWebsite = () => {
-    if (gym.Website) {
-      return <a href={gym.Website}>Website</a>
+    if (gym.website) {
+      return <a href={gym.website}>Website</a>
     }
   }
 
   const renderPhone = () => {
-    if (gym.Phone) {
-    return <Typography variant="body1" component="div">{gym.Phone}</Typography>
+    if (gym.phone) {
+    return <Typography variant="body1" component="div">{gym.phone}</Typography>
     }
   }
 
   const renderAddress = () => {
-    if (gym.Address) {
-      return <Typography variant="body1" component="div">{gym.Address}</Typography>
+    if (gym.address) {
+      return <Typography variant="body1" component="div">{gym.address}</Typography>
     }
   }
 
   const renderRating = () => {
-    if (gym.Rating) {
+    if (gym.rating) {
       return <Rating
       name="simple-controlled"
-      value={gym.Rating}
+      value={gym.rating}
       onChange={(event, newValue) => {
         console.log('adding ratings not yet implemented');
       }}
     />
     }
   }
-  console.log(gym);
   return (
     <Card className={cx(classes.root, shadowStyles.root)} variant="outlined">
       <CardContent>
         <Typography variant="h5" component="h2">
-        {gym.GymName}
+        {gym.gymname}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
           {renderWebsite()}
