@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 });
 
 process.env.PWD = process.cwd();
-app.use('/', express.static(path.join(process.env.PWD, '/client/dist')));
+app.use('/', express.static(path.join(process.env.PWD, '../client/dist')));
 
 app.get('/indoorGyms/api/json', routes.getGyms);
 
