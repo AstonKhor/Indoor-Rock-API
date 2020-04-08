@@ -74,7 +74,7 @@ function a11yProps(index) {
   };
 }
 
-export default function Header({ open, handleClose }) {
+export default function Header({ open, handleClose, createAccount }) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 

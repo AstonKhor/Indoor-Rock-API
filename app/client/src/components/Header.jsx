@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Header({ username }) {
+export default function Header({ username, createAccount }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -53,7 +53,7 @@ export default function Header({ username }) {
           IndoorRock API
         </Typography>
         {allowLogin(username)}
-        <LoginModal open={open} handleClickOpen={handleClickOpen} handleClose={handleClickClose}/>
+        <LoginModal open={open} handleClickOpen={handleClickOpen} handleClose={handleClickClose} createAccount={createAccount}/>
       </Toolbar>
     </AppBar>
   );

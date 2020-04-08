@@ -94,6 +94,10 @@ class App extends React.Component {
     }, this.updateSelectedGyms);
   }
 
+  createAccount(name, password, email) {
+    console.log('creating account!');
+  }
+
   removeParam(clickedParam) {
     let searchParams = this.state.searchParams.filter((param) => { return param !== clickedParam});
     this.setState({
@@ -143,7 +147,7 @@ class App extends React.Component {
   render() {
     return (
       <AppContainer>
-        <Header username={this.state.user}/>
+        <Header username={this.state.user} createAccount={this.createAccount}/>
         <HowTo apiKey={this.state.key}/>
         <SearchAndResultsContainer>
           <SearchContainer>

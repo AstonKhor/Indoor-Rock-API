@@ -56,3 +56,11 @@ fs.readFile('../scraper/data/data.json', (err, data) => {
   parseGyms(json);
 })
 
+let callback = () => {
+  console.log('here');
+  db.end().then(() => {
+    console.log('endingddafd')
+  })
+}
+
+setTimeout(callback, 3000);

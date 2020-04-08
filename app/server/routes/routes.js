@@ -8,7 +8,7 @@ module.exports = {
   getGyms: (req, res) => {
     console.log('query', req.query);
     //preven sql injections
-    db.query(`SELECT * FROM Gyms`, (err, gyms) => {
+    db.query(`SELECT * FROM gyms`, (err, gyms) => {
       if (err) throw err;
       res.end(JSON.stringify(gyms));
     })
@@ -19,7 +19,7 @@ module.exports = {
     console.log(req.body);
     let salt = Date.now();
     var hashedPassword = passwordHash.generate(req.body.password + salt);
-    db.query(`INSERT INTO Users ('Username', 'Password', 'Salt') VALUES ('${req.body.username}', '${hashedPassword}', ${Salt});`, (err, result) => {
+    db.query(`INSERT INTO users ('Username', 'Password', 'Salt') VALUES ('${req.body.username}', '${hashedPassword}', ${Salt});`, (err, result) => {
       if (err) {
         return res.end('invalid Username');
       }
@@ -29,7 +29,7 @@ module.exports = {
   },
   authenticateUser: (req, res) => {
     console.log(req.body);
-    db.query(`SELECT Password FROM Users WHERE Username = '${req.body.username}';`, (err, hashedPassword) => {
+    db.query(`SELECT password FROM Users WHERE Username = '${req.body.username}';`, (err, hashedPassword) => {
       let authenticated = passwordHash.verify(req.body.password, hashedPassword);
       res.end(JSON.stringify(authenticated));
     });
