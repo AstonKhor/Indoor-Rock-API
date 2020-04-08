@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const routes = require('./routes/routes.js');
+const routes = require('./routes/routes.js.js');
 let port = process.env.PORT || 3000;
 
 const app = express();
@@ -18,7 +18,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', express.static(path.join(__dirname, '../client/dist')));
+process.env.PWD = process.cwd();
+app.use('/', express.static(path.join(process.env.PWD, '../client/dist')));
 
 app.get('/indoorGyms/api/json', routes.getGyms);
 
