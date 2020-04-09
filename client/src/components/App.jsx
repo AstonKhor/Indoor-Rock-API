@@ -8,6 +8,7 @@ import Results from './Results';
 import SearchParams from './SearchParams';
 import getCookie from '../methods/getCookie';
 import clearCookies from'../methods/clearCookies';
+import MapBox from './MapBox';
 
 const AppContainer = withStyles({
   root: {
@@ -19,12 +20,15 @@ const AppContainer = withStyles({
   }
 })(Box);
 
-const SearchAndResultsContainer = withStyles({
+const BodyContainer = withStyles({
   root: {
     margin: '10px 70px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
+    position: 'sticky',
+    top: 0,
+    left: 0,
   }
 })(Box);
 
@@ -219,13 +223,14 @@ class App extends React.Component {
       <AppContainer>
         <Header apiKey={this.state.key} username={this.state.user} authenticateUser={this.authenticateUser} createAccount={this.createAccount} logout={this.logout}/>
         <HowTo apiKey={this.state.key}/>
-        <SearchAndResultsContainer>
+        <BodyContainer>
           <SearchContainer>
             <SearchParams params={this.state.searchParams} clearParams={this.clearParams}/>
             <Search addParam={this.addParam} params={this.state.searchParams} locations={this.state.locations}></Search>
           </SearchContainer>
           <Results selectedGyms={this.state.selectedGyms} page={this.state.resultPage} setPage={this.setPage}/>
-        </SearchAndResultsContainer>
+          <MapBox></MapBox>
+        </BodyContainer>
       </AppContainer>
     )
   }
