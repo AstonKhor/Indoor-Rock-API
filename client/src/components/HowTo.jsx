@@ -3,7 +3,7 @@ import Card from '@material-ui/core/Card';
 import clsx from 'clsx';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -50,6 +50,16 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
+  largeAvatar: {
+    width: 100,
+    height: 100,
+    float: 'right',
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+  },
+  link: {
+    color: 'inherit',
+  }
 }));
 
 const HowToUse = ({ apiKey }) => {
@@ -68,9 +78,8 @@ const HowToUse = ({ apiKey }) => {
     <Box className={classes.root}>      
       <Card className={classes.card}>
         <CardContent>
-          <Typography variant="h4"> About </Typography>
+          <Typography variant="h4"> About IndoorRock API</Typography>
           <Typography variant="body1"> IndoorRock is an open API for easy access to scraped data on indoor rock climbing gyms across the world </Typography>
-          
           <Typography variant="h4"> Requests </Typography>
           <Typography variant="h5"> HTTP Requests </Typography>
           <Typography variant="body1" className={classes.httpRequest}> GET https://www.IndoorRockAPI.com/indoorgyms/api/json </Typography>
