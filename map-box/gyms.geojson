@@ -1,0 +1,2805 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Campus Recreation Center",
+        "description": "1501 University Blvd, Birmingham, AL 35233, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -86.80474919999999,
+          33.50094
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "First Avenue Rocks",
+        "description": "2417 1st Ave S, Birmingham, AL 35233, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -86.7975348,
+          33.5146648
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Fortenberry-Colton Fitness Center",
+        "description": "5th Ave & Skychief St, Fort Rucker, AL 36362, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -85.71853209999999,
+          31.3250501
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Birmingham Boulders",
+        "description": "136 Industrial Dr, Birmingham, AL 35211, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -86.85114120000001,
+          33.4516826
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Faucett Brothers Activity Center",
+        "description": "13040 Eugenia Faucett Dr, Northport, AL 35473, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -87.6325969,
+          33.28679109999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Gadrock",
+        "description": "1403 Rainbow Dr, Gadsden, AL 35901, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -86.004476,
+          33.9880076
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "High Point Climbing - Birmingham",
+        "description": "4766 US-280, Birmingham, AL 35242, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -86.69849099999999,
+          33.4205861
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "University of Alabama",
+        "description": "Student Recreation Center, 401 5th Ave E, Tuscaloosa, AL 35401, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -87.5317036,
+          33.2124744
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "University of South Alabama - Student Recreatio…",
+        "description": "307 N University Blvd, Mobile, AL 36688, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -88.1786411,
+          30.6955253
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "High Point Climbing - Huntsville",
+        "description": "1020 Nunnahsae, N Park Dr NW, Huntsville, AL 35806, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -86.66693839999999,
+          34.7377642
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "YMCA Camp Cosby Alpine Tower",
+        "description": "2290 Paul Bear Bryant Rd, Alpine, AL 35014, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -86.2779448,
+          33.44290489999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ascension Rock Club",
+        "description": "195 Alta Way, Fairbanks, AK 99701, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -147.705885,
+          64.807222
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Alaska Rock Gym",
+        "description": "4840 Fairbanks St, Anchorage, AK 99503, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -149.8739004,
+          61.1765746
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cassel Rock",
+        "description": "525 W Potter Dr, Anchorage, AK 99518, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -149.8923083,
+          61.1711319
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Alaska-Pacific University Climbing Wall",
+        "description": "Grant Hall, 4101 University Dr, Anchorage, AK 99508, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -149.8066265,
+          61.18949000000001
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Piuraagvik Recreation Center",
+        "description": "2026 Ahkovak St, Utqiagvik, AK 99723, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -156.758687,
+          71.289655
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rock On Climbing",
+        "description": "1080 Wasilla-Fishhook Rd, Wasilla, AK 99654, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -149.4419879,
+          61.5904092
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Skagway Recreation Center",
+        "description": "455 13th Ave, Skagway, AK 99840, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -135.3093171,
+          59.4605436
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Alaska Club South",
+        "description": "10931 O'Malley Centre Dr, Anchorage, AK 99515, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -149.8597676,
+          61.12158419999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Alaska Club Valley",
+        "description": "1720 E Parks Hwy, Wasilla, AK 99654, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -149.4080519,
+          61.57431419999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Alaska Club West",
+        "description": "1400 W Northern Lights Blvd, Anchorage, AK 99503, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -149.9104661,
+          61.19464429999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "University of Alaska Southeast Climbing Wall",
+        "description": "Recreation Center, 12300 Mendenhall Loop Rd, Juneau, AK 99801, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -134.6463966,
+          58.39116869999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Rock Dump Indoor Climbing Gym",
+        "description": "1310 Eastaugh Way, Juneau, AK 99801, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -134.3883653,
+          58.28804979999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "University of Alaska Student Rec Center",
+        "description": "Fairbanks, AK 99775, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -147.87928,
+          64.8170701
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Valdez Middle School Climbing Gym",
+        "description": "357 Robe River Dr, Valdez, AK 99686, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -146.3599602,
+          61.1381484
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Alta Climbing and Fitness",
+        "description": "3193 S Ranch House Pkwy, Gilbert, AZ 85297, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.6970786,
+          33.2870149
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "AZ on the Rocks",
+        "description": "16447 N 91st St Suite A, Scottsdale, AZ 85260, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.8841914,
+          33.6364982
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Beta Bouldering Gym ",
+        "description": "495 S River Run Rd #104, Flagstaff, AZ 86001, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.6363085,
+          35.1887826
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Black Rock Bouldering Gym",
+        "description": "10436 N 32nd St, Phoenix, AZ 85028, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -112.0135902,
+          33.5812861
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ape Index",
+        "description": "9700 N 91st Ave, Peoria, AZ 85345, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -112.2558193,
+          33.5718435
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Flagstaff Climbing: Downtown Crag",
+        "description": "205 S San Francisco St, Flagstaff, AZ 86001, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.6495762,
+          35.1943785
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ciba Climbing",
+        "description": "4066 E Monsanto Dr Suite B, Sierra Vista, AZ 85650, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -110.255938,
+          31.499097
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Focus Climbing Center",
+        "description": "2150 W Broadway Rd, Mesa, AZ 85202, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.8777125,
+          33.4089539
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Climbmax Climbing Gym",
+        "description": "1330 W Auto Dr, Tempe, AZ 85284, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.9589448,
+          33.3431488
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "GCU Climbing Wall",
+        "description": "3300 W Camelback Rd, Phoenix, AZ 85017, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -112.1298877,
+          33.5131895
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Gripstone",
+        "description": "319 N Lee Blvd, Prescott, AZ 86301, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -112.4042802,
+          34.5512467
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Flagstaff Climbing: Main Street Boulders",
+        "description": "1519 N Main St, Flagstaff, AZ 86004, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.6182824,
+          35.2024226
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Lifetime Fitnesses Palm Valley",
+        "description": "14540 W McDowell Rd, Goodyear, AZ 85395, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -112.371497,
+          33.4658716
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Miraval Luxury Resort",
+        "description": "E Vía Estancia Miraval, Catalina, AZ 85739, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -110.8855376,
+          32.5088188
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Lifetime Fitness",
+        "description": "1616 W Ruby Dr, Tempe, AZ 85284, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.9643591,
+          33.3413432
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Northern Arizona University Climbing wall",
+        "description": "Flagstaff, AZ 86011, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.653403,
+          35.19054029999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Phoenix Rock Gym",
+        "description": "1353 E University Dr, Tempe, AZ 85281, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -111.9161519,
+          33.4206788
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rocks and Ropes Climbing Gym",
+        "description": "330 S Toole Ave #400, Tucson, AZ 85701, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -110.9612278,
+          32.2175493
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Climb Bentonville",
+        "description": "801 SW 14th St, Bentonville, AR 72712, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -94.21972009999999,
+          36.3565749
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Bloc",
+        "description": "8975 E Tanque Verde Rd #155, Tucson, AZ 85749, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -110.800508,
+          32.260057
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Prescott Rocks and Rec",
+        "description": "1201 W Iron Springs Rd #8, Prescott, AZ 86305, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -112.4859087,
+          34.560264
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "La Casa Pollo",
+        "description": "17496 Lake Sequoyah Rd, Fayetteville, AR 72701, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -94.04592,
+          36.063141
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Crag",
+        "description": "1212 S Church St, Jonesboro, AR 72401, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -90.7032575,
+          35.8316495
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ozark Climbing Gym",
+        "description": "875 E Robinson Ave, Springdale, AR 72764, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -94.1231594,
+          36.16634060000001
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "University of Arkansas Outdoor Center",
+        "description": "155 Stadium Dr, Fayetteville, AR 72701, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -94.177943,
+          36.064625
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Little Rock Climbing Center",
+        "description": "12120 Colonel Glenn Rd #7000, Little Rock, AR 72210, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -92.41114519999999,
+          34.71181660000001
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Wall (Russellville Climbing Center)",
+        "description": "1605 N Phoenix Ave, Russellville, AR 72801, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -93.146181,
+          35.300734
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Zion Climbing Center",
+        "description": "120 N Spruce St, Searcy, AR 72143, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -91.7384646,
+          35.2492503
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "24 Hour Fitness - Lakeshore Towers",
+        "description": "18007 Von Karman Ave, Irvine, CA 92612, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.8521142,
+          33.6795772
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Agoura Hills/Calabasas Community Center",
+        "description": "27040 Malibu Hills Rd, Agoura Hills, CA 91301, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.7129628,
+          34.1361617
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Aesthetic Climbing Gym",
+        "description": "26794 Vista Terrace, Lake Forest, CA 92630, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.663927,
+          33.6649859
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bladium Rock Wall",
+        "description": "800 W Tower Ave Bldg 40, Alameda, CA 94501, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.3010959,
+          37.7821128
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Boulderdash SFV",
+        "description": "19801 Nordhoff Pl #110, Chatsworth, CA 91311, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.5657744,
+          34.2362604
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Boulderdash Indoor Rock Climbing",
+        "description": "880 Hampshire Rd Suite-A, Westlake Village, CA 91361, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.8307986,
+          34.1544358
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Blue Granite Climbing Gym",
+        "description": "1259 Emerald Bay Rd, South Lake Tahoe, CA 96150, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.9990962,
+          38.9056514
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Aztec Recreation Center",
+        "description": "5500 Campanile Dr, San Diego, CA 92182, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.0712533,
+          32.7759894
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Boulderdash Ventura",
+        "description": "2879 Seaborg Ave suite d, Ventura, CA 93003, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.21308,
+          34.2472429
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bridges Rock Gym",
+        "description": "5635 San Diego St, El Cerrito, CA 94530, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.3073412,
+          37.8998627
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cal Poly Pomona, Bronco Recreation and Intramur…",
+        "description": "3801 W Temple Ave Bldg. 42, Pomona, CA 91768, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.8192622,
+          34.055599
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cliffs of Id",
+        "description": "2537 S Fairfax Ave, Culver City, CA 90232, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.3710029,
+          34.0332668
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "ClimbX",
+        "description": "18411 Gothard St Unit I, Huntington Beach, CA 92648, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.0007219,
+          33.6954333
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Crux Climbing Center",
+        "description": "1160 Laurel Ln, San Luis Obispo, CA 93401, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -120.6435832,
+          35.2640497
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "CSU San Bernardino",
+        "description": "5500 University Pkwy, San Bernardino, CA 92407, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.3215307,
+          34.1813145
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Diablo Rock Gym",
+        "description": "1220 Diamond Way, Concord, CA 94520, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.0532543,
+          37.9648571
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Desert Rocks Indoor Climbing Gym",
+        "description": "19160 McLane St, North Palm Springs, CA 92258, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -116.55183,
+          33.909043
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Dogpatch Boulders",
+        "description": "2573 3rd St, San Francisco, CA 94107, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.387782,
+          37.7567228
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Flowstone Climbing",
+        "description": "1411 W State St, Redlands, CA 92373, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.2048896,
+          34.0550996
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Gold Crush Climbing Gym",
+        "description": "124 Clydesdale Ct STE D, Grass Valley, CA 95945, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.0318079,
+          39.2219493
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Factory Bouldering",
+        "description": "1547 W Struck Ave Suite A, Orange, CA 92867, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.869146,
+          33.8066282
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Frogs Athletic Club",
+        "description": "780 Garden View Ct, Encinitas, CA 92024, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.2611736,
+          33.060824
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Great Western Power Co.",
+        "description": "520 20th St, Oakland, CA 94612, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.2702065,
+          37.8097934
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Goleta Valley Athletic Club",
+        "description": "170 Los Carneros Way, Goleta, CA 93117, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.8539536,
+          34.4316378
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Granite Arch Climbing Center",
+        "description": "11335 Folsom Blvd, Rancho Cordova, CA 95742, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.2592835,
+          38.6123532
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Gritstone Rock Club",
+        "description": "3116 Olympic Way b, Auburn, CA 95603, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.1104734,
+          38.9408773
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Grotto Climbing & Yoga",
+        "description": "4460 Alvarado Canyon Rd, San Diego, CA 92120, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.0980249,
+          32.7802694
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hangar 18 East Riverside",
+        "description": "2111 Iowa Ave Unit A, Riverside, CA 92507, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.3409193,
+          33.991738
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Gymnastics World",
+        "description": "20914 Nordhoff St #101, Canoga Park, CA 91304, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.5893724,
+          34.2348466
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hangar 18 Mission Viejo",
+        "description": "23812 Vía Fabricante A4, Mission Viejo, CA 92691, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.6824427,
+          33.617268
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hangar 18 Rancho Cucamonga",
+        "description": "9004 Hyssop Dr, Rancho Cucamonga, CA 91730, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.5436958,
+          34.0899115
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hangar 18 High Desert",
+        "description": "15315 Cholame Rd Unit D, Victorville, CA 92392, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.3293947,
+          34.5018619
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hangar 18 Long Beach",
+        "description": "2599 E Willow St, Signal Hill, CA 90755, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.1615925,
+          33.8051374
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hangar 18 Riverside",
+        "description": "6935 Arlington Ave, Riverside, CA 92503, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.4461408,
+          33.9462019
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hangar 18 San Clemente",
+        "description": "1031 Calle Trepadora Unit A, San Clemente, CA 92673, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.6006272,
+          33.4536393
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hanger 18 Arcadia",
+        "description": "305 N Santa Anita Ave, Arcadia, CA 91006, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.0319401,
+          34.1432717
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hollywood Boulders",
+        "description": "1107 N Bronson Ave, Los Angeles, CA 90038, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.3181587,
+          34.0911978
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hangar 18 Southbay",
+        "description": "4926 Rosecrans Ave, Hawthorne, CA 90250, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.3654612,
+          33.9011743
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hangar 18 Upland",
+        "description": "256 E Stowell St Suite A, Upland, CA 91786, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.6477931,
+          34.0936836
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Humboldt State University Student Recreation Ce…",
+        "description": "1 Harpst St, Arcata, CA 95521, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -124.0790979,
+          40.8744392
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "LA Boulders",
+        "description": "1375 E 6th St #7, Los Angeles, CA 90021, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.2341733,
+          34.0388417
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Long Beach Rising",
+        "description": "205 E Anaheim St, Long Beach, CA 90813, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.1908522,
+          33.7828038
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ironworks",
+        "description": "800 Potter St, Berkeley, CA 94710, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.2925911,
+          37.8508457
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Kids Party Central",
+        "description": "327 Ohair Ct, Santa Rosa, CA 95407, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.7245784,
+          38.404322
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Mesa Rim - Mira Mesa",
+        "description": "10110 Mesa Rim Rd, San Diego, CA 92121, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.1776669,
+          32.9023232
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Mesa Rim - Mission Valley",
+        "description": "405 Camino del Rio S, San Diego, CA 92116, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.161309,
+          32.7596759
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Metal Mark",
+        "description": "4042 N Cedar Ave, Fresno, CA 93726, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.7518784,
+          36.7904775
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Mesa Rim - Climbing Academy",
+        "description": "10070 Mesa Rim Rd, San Diego, CA 92121, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.1778735,
+          32.9016332
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "North of the River",
+        "description": "401 Willow Dr, Bakersfield, CA 93308, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.0275353,
+          35.4016035
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Pacific Edge Climbing",
+        "description": "104 Bronson St #12, Santa Cruz, CA 95062, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.0066243,
+          36.9679708
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Mission Cliffs",
+        "description": "2295 Harrison St, San Francisco, CA 94110, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.4124476,
+          37.7607565
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Planet Granite",
+        "description": "100 El Camino Real, Belmont, CA 94002, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.2876296,
+          37.5288834
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Planet Granite",
+        "description": "Old Mason St, San Francisco, CA 94129, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.4637394,
+          37.7987852
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Planet Granite",
+        "description": "815 Stewart Dr, Sunnyvale, CA 94085, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.0106192,
+          37.3844811
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Planet Granite Santa Clara",
+        "description": "801 Martin Ave, Santa Clara, CA 95050, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.9482549,
+          37.3672219
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rock Fitness",
+        "description": "24305 Prielipp Rd STE 107, Wildomar, CA 92595, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.2362265,
+          33.58900210000001
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rocknasium",
+        "description": "720 Olive Dr Suite S, Davis, CA 95616, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.7389008,
+          38.53879149999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rock City Climbing Center",
+        "description": "5100 E La Palma Ave #108, Anaheim, CA 92807, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.8063943,
+          33.8583613
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rockreation",
+        "description": "1300 Logan Ave, Costa Mesa, CA 92626, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.9115315,
+          33.679083
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Outback Climbing wall",
+        "description": "9500 Gilman Dr, La Jolla, CA 92093, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.2340135,
+          32.8800604
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rockreation",
+        "description": "11866 La Grange Ave, Los Angeles, CA 90025, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.45342,
+          34.03471
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rocktopia",
+        "description": "999 Bancroft Rd, Concord, CA 94518, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.051872,
+          37.9388348
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rockzilla",
+        "description": "849 Jackson St #5A, Napa, CA 94559, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.2881169,
+          38.3073913
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Sacramento Pipeworks",
+        "description": "116 N 16th St, Sacramento, CA 95811, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.4812782,
+          38.5890475
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Sage to Summit",
+        "description": "312 N Main St, Bishop, CA 93514, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.3949044,
+          37.3629806
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Sender One Climbing - LAX",
+        "description": "11220 Hindry Ave, Los Angeles, CA 90045, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.371817,
+          33.9324583
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Santa Barbara Rock Gym",
+        "description": "322 State St, Santa Barbara, CA 93101, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.6935531,
+          34.4156118
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Sender One Climbing - SNA",
+        "description": "1441 S, Village Way, Santa Ana, CA 92705, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.8350886,
+          33.7292921
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Student Recreation Center at CSUB",
+        "description": "9001 Stockdale Hwy #65, Bakersfield, CA 93311, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.1015615,
+          35.3489416
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "SLO-Op Climbing ",
+        "description": "289 Prado Rd, San Luis Obispo, CA 93401, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -120.6649232,
+          35.2533469
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "SRC Rock Wall",
+        "description": "800 N State College Blvd, Fullerton, CA 92831, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.8900444,
+          33.8779199
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Shasta Rock Club",
+        "description": "2325 Athens Ave, Redding, CA 96001, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.3748024,
+          40.57750230000001
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Stonehenge Climbing Gym",
+        "description": "500 9th St, Modesto, CA 95354, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -120.995429,
+          37.6359487
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Terrain Park Climbing Center",
+        "description": "931 W 5th St, Chico, CA 95928, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.8458086,
+          39.7225027
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Boulder Field",
+        "description": "8425 Belvedere Ave #100, Sacramento, CA 95826, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.3933066,
+          38.539017
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Team Touchstone Training Facility",
+        "description": "795 Potter St, Berkeley, CA 94710, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.2926777,
+          37.8517072
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Pad",
+        "description": "2399 A St, Santa Maria, CA 93455, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -120.465376,
+          34.9172903
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Factory Bouldering",
+        "description": "1547 W Struck Ave Suite A, Orange, CA 92867, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.869146,
+          33.8066282
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Pit",
+        "description": "760 Orchard Rd, Davis, CA 95616, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.7590926,
+          38.54280079999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Stronghold Climbing Gym",
+        "description": "The Brewery, 650 S Avenue 21, Los Angeles, CA 90031, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.2171632,
+          34.063628
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Peak of Fremont",
+        "description": "4020 Technology Pl, Fremont, CA 94538, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.950955,
+          37.510594
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Studio",
+        "description": "396 S 1st St, San Jose, CA 95113, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.8857449,
+          37.3303191
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Rock Gym",
+        "description": "2599 E Willow St, Signal Hill, CA 90755, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.1615925,
+          33.8051374
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "The Well at Sacramento State",
+        "description": "6000 J St, Sacramento, CA 95819, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.4252955,
+          38.5642453
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "TruHold Climbing",
+        "description": "23812 Vía Fabricante A4, Mission Viejo, CA 92691, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.6824427,
+          33.617268
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Touchstone MetalMark",
+        "description": "4042 N Cedar Ave, Fresno, CA 93726, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.7518784,
+          36.7904775
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Top Out Climbing Gym",
+        "description": "26332 Ferry Ct, Santa Clarita, CA 91350, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.5087939,
+          34.40947269999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Torrance South Bay YMCA",
+        "description": "2900 Sepulveda Blvd, Torrance, CA 90505, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.3377023,
+          33.82297620000001
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "UCSB",
+        "description": "3025 Ocean Road, UCSB Recreation Center, Santa Barbara, CA 93106, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.850304,
+          34.418841
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Verdigo Boulders",
+        "description": "266 E Magnolia Blvd, Burbank, CA 91502, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -118.3105994,
+          34.1836665
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Twisters Sports",
+        "description": "2639 Terminal Blvd, Mountain View, CA 94043, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.098937,
+          37.4331337
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Vert Rock Gym",
+        "description": "9500 Brimhall Rd #400, Bakersfield, CA 93312, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.1095765,
+          35.3699888
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Vertex Climbing Center",
+        "description": "3358a Coffey Ln, Santa Rosa, CA 95403, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -122.7430465,
+          38.4722025
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Vertical Hold",
+        "description": "2074 Hancock St, San Diego, CA 92110, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.1891074,
+          32.7449805
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "University of California - Irvine",
+        "description": "680 California Ave, Irvine, CA 92617, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.8278732,
+          33.643425
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Vertical Hold",
+        "description": "992 Rancheros Dr, San Marcos, CA 92069, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.1328175,
+          33.1367274
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Vertical Hold",
+        "description": "2074 Hancock St, San Diego, CA 92110, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.1891074,
+          32.7449805
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Vertical Hold Gym",
+        "description": "13026 Stowe Dr, Poway, CA 92064, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.0438251,
+          32.943366
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Vital Climbing Gym",
+        "description": "6102 Avenida Encinas Suite L, Carlsbad, CA 92011, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.3209714,
+          33.1185976
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Vertical Hold Sport Climbing Inc.",
+        "description": "9580 Distribution Ave, San Diego, CA 92121, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.1641681,
+          32.8802557
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Vital Oceanside",
+        "description": "525 S Coast Hwy, Oceanside, CA 92054, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.3746175,
+          33.1896584
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "VITAL Climbing Gym",
+        "description": "29990 Technology Dr STE 22, Murrieta, CA 92563, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -117.1362778,
+          33.5614333
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Adams State University Climbing Wall",
+        "description": "208 Edgemont Blvd, Alamosa, CO 81101, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.8801626,
+          37.4710901
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Adventure Unlimited Rock Gym ",
+        "description": "Buena Vista, CO 81211, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.1311288,
+          38.8422178
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Airborne Gymnastics",
+        "description": "1861 Boston Ave, Longmont, CO 80501, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.1258347,
+          40.1588454
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Apex Center",
+        "description": "6842 Wadsworth Blvd, Arvada, CO 80003, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.0804929,
+          39.8211586
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "WREC Climbing Gym",
+        "description": "400 W 1st St, Chico, CA 95929, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.8476287,
+          39.7287566
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ascent Studio",
+        "description": "2150 Joseph Allen Dr, Fort Collins, CO 80525, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.0411273,
+          40.5590789
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Aspen Recreation Department Red Brick Climbing Gym",
+        "description": "110 E Hallam St #135, Aspen, CO 81611, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.8206953,
+          39.1930459
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bass Pro Shops",
+        "description": "7970 Northfield Blvd, Denver, CO 80238, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -104.8956588,
+          39.7810463
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Boulder Rec Center - East",
+        "description": "5660 Sioux Dr, Boulder, CO 80303, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.220073,
+          39.9921076
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Basecamp Bouldering",
+        "description": "480 Main St, Ouray, CO 81427, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -107.6717313,
+          38.0215199
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Boulder Rock Club and Colorado Mountain School",
+        "description": "2829 Mapleton Ave, Boulder, CO 80301, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.2567406,
+          40.0259673
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Broomfield Recreation Center Climbing Wall",
+        "description": "13201 Lowell Blvd, Broomfield, CO 80020, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.0362491,
+          39.9348641
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Charles Whitlock Climbing Gym",
+        "description": "1555 Dover St, Lakewood, CO 80215, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.0941946,
+          39.741605
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "CityRock Colorado Springs",
+        "description": "21 N Nevada Ave, Colorado Springs, CO 80903, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -104.821066,
+          38.834769
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Buchanan Park Recreation Center",
+        "description": "32003 Ellingwood Trail, Evergreen, CO 80439, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.3631591,
+          39.6846728
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bouldering wall at Spring Valley Center",
+        "description": "3000 Co Rd 114, Glenwood Springs, CO 81601, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -107.2370962,
+          39.4709092
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Colorado Athletic Training School",
+        "description": "2400 30th St, Boulder, CO 80301, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.2515195,
+          40.02553109999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Denver Bouldering Club",
+        "description": "2485 W 2nd Ave #18, Denver, CO 80223, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.0168677,
+          39.7206181
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "CMU Student Recreation Center",
+        "description": "1100 North Ave, Grand Junction, CO 81501, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -108.5538256,
+          39.0788346
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "CSU Pueblo Climbing Wall",
+        "description": "Colorado State University-Pueblo, 2200 Bonforte Blvd, Pueblo, CO 81001, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -104.579911,
+          38.3060152
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "CSU Rec Center",
+        "description": "Student Recreation Center, 951 Meridian Ave, Fort Collins, CO 80523, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.089856,
+          40.575156
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Earth Treks Englewood",
+        "description": "1050 W Hampden Ave, Englewood, CO 80110, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.0007765,
+          39.6498748
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Denver Bouldering Club South",
+        "description": "4131 S Natches Ct Unit E, Sheridan, CO 80110, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.0094454,
+          39.64105989999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Eagle Climbing + Fitness",
+        "description": "700 Chambers Ave #7, Eagle, CO 81631, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.8227695,
+          39.66014029999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Earth Treks Golden",
+        "description": "700 Golden Ridge Rd, Golden, CO 80401, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.207459,
+          39.7281151
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Eastridge Recreation Center",
+        "description": "The Recreation Center at Eastridge, 9568 S University Blvd, Highlands Ranch, CO 80126, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -104.937699,
+          39.5437445
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Epic Climbing Gym",
+        "description": "2050 Big Thompson Ave, Estes Park, CO 80517, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.487351,
+          40.37745899999999
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Erie Community Center",
+        "description": "450 Powers St, Erie, CO 80516, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.0522711,
+          40.0373876
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ft. Lewis College",
+        "description": "111 E 30th St, Durango, CO 81301, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -107.871618,
+          37.2972852
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Estes Park Mountain Shop",
+        "description": "2050 Big Thompson Ave, Estes Park, CO 80517, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.4873506,
+          40.377462
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Glenwood Springs Rec Center",
+        "description": "100 Wulfsohn Rd, Glenwood Springs, CO 81601, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -107.339115,
+          39.5510743
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Evo Rock + Fitness Louisville",
+        "description": "1754 Dogwood St, Louisville, CO 80027, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.1166147,
+          39.9656424
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "G1 Climbing + Fitness",
+        "description": "8845 W 116th Cir, Broomfield, CO 80021, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.099673,
+          39.906442
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Golden Community Center",
+        "description": "1470 10th St, Golden, CO 80401, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.2299941,
+          39.7557828
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Grand Valley Climbing",
+        "description": "611 25 Rd, Grand Junction, CO 81505, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -108.5908901,
+          39.093513
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Greeley Downtown Rec Center",
+        "description": "651 10th Ave, Greeley, CO 80631, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -104.695174,
+          40.426128
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Gripstone Climbing and Fitness",
+        "description": "6220 Tutt Blvd, Colorado Springs, CO 80922, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -104.7157578,
+          38.9245552
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Gunnison Community Center",
+        "description": "200 Spencer Ave, Gunnison, CO 81230, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.9244013,
+          38.5565833
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Lakeshore Athletic Club",
+        "description": "300 Summit Blvd, Broomfield, CO 80021, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.1420681,
+          39.9257867
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Lakewood Climbing Wall",
+        "description": "1295 S Reed St, Denver, CO 80232, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.0750319,
+          39.693159
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Gypsum Rec Center Climbing Pinnacle",
+        "description": "52 Lundgren Blvd, Gypsum, CO 81637, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -106.9480259,
+          39.6396248
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Lifetime Fitness",
+        "description": "9250 Crown Crest Blvd, Parker, CO 80138, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -104.770052,
+          39.5524551
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Longmont Climbing Collective",
+        "description": "33 S Pratt Pkwy #300, Longmont, CO 80501, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.107395,
+          40.158871
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Longmont Recreation Center",
+        "description": "310 Quail Rd, Longmont, CO 80501, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.0972019,
+          40.1456008
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Miramont North",
+        "description": "1800 Heath Pkwy, Fort Collins, CO 80521, USA"
+      },
+      "geometry": {
+        "coordinates": [
+          -105.0435954,
+          40.5861958
+        ],
+        "type": "Point"
+      }
+    }
+  ],
+  "type": "FeatureCollection"
+}
