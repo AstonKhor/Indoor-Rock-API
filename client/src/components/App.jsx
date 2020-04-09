@@ -2,13 +2,12 @@ import React from 'react';
 import HowTo from './HowTo';
 import Search from './Search';
 import Header from './Header';
-import Container from '@material-ui/core/Container';
-import cookieParser from 'cookie-parser';
 import Box from '@material-ui/core/Box';
 import { withStyles } from '@material-ui/core/styles';
 import Results from './Results';
 import SearchParams from './SearchParams';
 import getCookie from '../methods/getCookie';
+import clearCookies from'../methods/clearCookies';
 
 const AppContainer = withStyles({
   root: {
@@ -25,6 +24,7 @@ const SearchAndResultsContainer = withStyles({
     margin: '10px 70px',
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'center',
   }
 })(Box);
 
@@ -32,7 +32,7 @@ const SearchContainer = withStyles({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    width: 400,
+    width: 275,
   }
 })(Box);
 
@@ -53,6 +53,9 @@ class App extends React.Component {
     this.clearParams = this.clearParams.bind(this);
     this.setPage = this.setPage.bind(this);
     this.checkSession = this.checkSession.bind(this);
+    this.authenticateUser = this.authenticateUser.bind(this);
+    this.createAccount = this.createAccount.bind(this);
+    this.logout = this.logout.bind(this);
   }
 
   componentDidMount() {
@@ -97,7 +100,6 @@ class App extends React.Component {
     let password = document.getElementById('loginPassword').value;
     fetch(`/login?username=${username}&password=${password}`)
       .then((resp) => {
-        console.log(resp);
         if(resp.status === 200) {
           this.checkSession()
         }
@@ -111,17 +113,19 @@ class App extends React.Component {
   }
 
   checkSession() {
-    console.log('here');
     let sessionKey = getCookie('sessionKey');
     if (sessionKey) {
       fetch(`/checkSession?sessionKey=${sessionKey}`)
-        .then((resp) => resp.json())
+        .then((resp) => {
+          if (resp.status !== 200) {
+            return {username: 'Guest', key: 'Please Login or Signup to receive an API Key'};
+          }
+          return resp.json()
+        })
         .then((data) => {
-          console.log('check sess', data);
           this.setState({
-            user: data.username
-          }, () => {
-            console.log(this.state.user);
+            user: data.username,
+            key: data.key,
           })
         })
     }
@@ -134,7 +138,6 @@ class App extends React.Component {
   }
 
   createAccount() {
-    console.log(document.getElementById('username').value);
     let bodyData = {
       username: document.getElementById('username').value,
       password: document.getElementById('password').value,
@@ -154,6 +157,15 @@ class App extends React.Component {
       .then((data) => {
         console.log(data);
       })
+  }
+
+  logout() {
+    clearCookies();
+    console.log('here logging out');
+    this.setState({
+      user: 'Guest', 
+      key: 'Please Login or Signup to receive an API Key'
+    });
   }
 
   removeParam(clickedParam) {
@@ -205,7 +217,7 @@ class App extends React.Component {
   render() {
     return (
       <AppContainer>
-        <Header username={this.state.user} authenticateUser={this.authenticateUser} createAccount={this.createAccount}/>
+        <Header apiKey={this.state.key} username={this.state.user} authenticateUser={this.authenticateUser} createAccount={this.createAccount} logout={this.logout}/>
         <HowTo apiKey={this.state.key}/>
         <SearchAndResultsContainer>
           <SearchContainer>

@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import LoginModal from './LoginModal';
+import AccountMenu from './AccountMenu';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,9 +27,18 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Header({ username, authenticateUser, createAccount }) {
+export default function Header({ apiKey, username, authenticateUser, createAccount, logout }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const handleAccountClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleAccountClose = () => {
+    setAnchorEl(null);
+  };
+
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -42,7 +52,7 @@ export default function Header({ username, authenticateUser, createAccount }) {
     if (user === 'Guest') {
       return <Button color="inherit" onClick={handleClickOpen}>Login</Button>
     } else {
-      return <Button color="inherit">Username</Button>
+      return <Button color="inherit" onClick={handleAccountClick}>{username}</Button>
     }
   }
 
@@ -53,6 +63,7 @@ export default function Header({ username, authenticateUser, createAccount }) {
           IndoorRock API
         </Typography>
         {allowLogin(username)}
+        <AccountMenu apiKey={apiKey} anchorEl={anchorEl} handleAccountClose={handleAccountClose} logout={logout}></AccountMenu>
         <LoginModal open={open} handleClose={handleClickClose} authenticateUser={authenticateUser} createAccount={createAccount}/>
       </Toolbar>
     </AppBar>

@@ -1,9 +1,15 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import ResultCard from './ResultCard';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import Pagination from '@material-ui/lab/Pagination';
 import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Rating from '@material-ui/lab/Rating';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,17 +25,18 @@ const useStyles = makeStyles((theme) => ({
   pagination: {
     display: 'flex',
     alignSelf: 'center',
-  }
-}));
-
-const ResultCardsContainer = withStyles({
-  root: {
+  },
+  gymListing: {
+    borderRadius: 10,
+    backgroundColor: '#e8ffc4',
+  },
+  listSecondaryContainer: {
     display: 'flex',
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-between',
+    alignItems: 'center',
   }
-})(Container)
+}));
 
 export default function Results({ selectedGyms, page, setPage }) {
   const classes = useStyles();
@@ -40,16 +47,57 @@ export default function Results({ selectedGyms, page, setPage }) {
     }
   }
 
+  const renderWebsite = (gym) => {
+    if (gym.website) {
+      return <a href={gym.website}>Website</a>
+    }
+  }
+
+  const renderPhone = (gym) => {
+    if (gym.phone) {
+    return <Typography variant="body1" component="div">{gym.phone}</Typography>
+    }
+  }
+
+  const renderAddress = (gym) => {
+    if (gym.address) {
+      return <Typography variant="body1" component="div">{gym.address}</Typography>
+    }
+  }
+
+  const renderRating = (gym) => {
+    if (gym.rating) {
+      return <Rating
+      name="simple-controlled"
+      value={parseFloat(gym.rating)}
+      onChange={(event, newValue) => {
+        console.log('adding ratings not yet implemented');
+      }}
+    />
+    }
+  }
+
   return (
-    <Grid container className={classes.root} justify="center" spacing={2}>
+    <List className={classes.root}>
       <Pagination className={classes.pagination}count={Math.ceil(selectedGyms.length / 10)} page={page} onChange={setPage}/>
-      <ResultCardsContainer>
-        {pageGyms.map((gym) => (
-          <Grid key={`${gym.id}${gym.country}`} item>
-            <ResultCard gym={gym}></ResultCard>
-          </Grid>
-        ))}
-      </ResultCardsContainer>
-    </Grid>
+      {pageGyms.map((gym) => (
+        <React.Fragment>
+          <ListItem button key={`${gym.id}${gym.country}`}>
+            <ListItemText primary={gym.gymname} secondary={
+              <Box className={classes.listSecondaryContainer}>
+                <Typography className={classes.pos} color="textSecondary" component="span">
+                  {renderWebsite(gym)}
+                  {renderPhone(gym)}
+                  {renderAddress(gym)}
+                  {renderRating(gym)}
+                </Typography>
+                <Button size="small">Learn More</Button>
+              </Box>
+            } />
+          </ListItem>
+          <Divider variant="inset" component="li" />
+        </React.Fragment>
+      ))}
+    </List>
   );
 }

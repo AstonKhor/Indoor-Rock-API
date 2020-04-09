@@ -33,3 +33,4 @@ CREATE TABLE keys (
   FOREIGN KEY (User_Id) REFERENCES users(Id) ON DELETE CASCADE
 );
 
+-- heroku pg:psql postgresql-solid-31865 --app indoor-rock-api
