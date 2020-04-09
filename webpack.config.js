@@ -1,4 +1,4 @@
-// const webpack = require('webpack');
+const webpack = require('webpack');
 const path = require('path');
 // const dotenv = require('dotenv').config({path: __dirname + '/.env'});
 const Dotenv = require('dotenv-webpack');
@@ -10,7 +10,8 @@ module.exports = {
     path: path.resolve(__dirname, 'client/dist'),
   },
   plugins: [
-    new Dotenv()
+    new Dotenv(),
+    new webpack.EnvironmentPlugin( { ...process.env } )
   ],
   module: {
     rules: [
