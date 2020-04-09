@@ -1,12 +1,12 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
-let testCount = 200;
+let testCount = 10000;
 let promises = []
 const http = require('http');
 const https = require('https');
 http.globalAgent.maxSockets = 5;
 https.globalAgent.maxSockets = 5;
-const config = require('./config');
+require('dotenv').config()
 
 const geoJSON = {
   features: [],
@@ -62,9 +62,8 @@ parseGym = (gym) => {
   }
   if (gym.address) {
     let address = gym.address.trim();
-    address = address.split(' ').join('+');
-    address = address.split('#').join('');
-    let apiString = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${config.apiKey}`
+    address = encodeURIComponent(address);
+    let apiString = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.GOOGLE_MAPS_APIKEY}`
     if(testCount > 0) {
       testCount--;
       console.log(gym.name);
@@ -86,6 +85,8 @@ parseGym = (gym) => {
             resolve();
           })
           .catch((err) => {
+            console.log('gym', gym);
+            console.log(address);
             console.log('inside fetch catch')
             throw err;
           })
