@@ -18,7 +18,6 @@ let useStyles = makeStyles({
 
 const MapBox = () => {
   const classes = useStyles();
-  console.log('env', process.env);
   useEffect(() => {
     mapboxgl.accessToken = process.env.MAPBOX_APIKEY; 
     var map = new mapboxgl.Map({

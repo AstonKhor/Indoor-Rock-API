@@ -66,7 +66,6 @@ class App extends React.Component {
     fetch('/indoorGyms/api/json')
       .then((resp) => resp.json())
       .then((gyms) => {
-        console.log('GYMS', gyms);
         gyms = gyms.rows;
         let locations = {};
         for (let i = 0; i < gyms.length; i++) {
