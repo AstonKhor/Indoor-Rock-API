@@ -163,7 +163,7 @@ export default function Header({ apiKey, username, authenticateUser, createAccou
               </DialogContent>
               <DialogActions>
                 <a href="mailto:khoraston@gmail.com" className={classes.link}><EmailIcon></EmailIcon></a>
-                <a href="https://github.com/AstonKhor/" className={classes.link}><GitHubIcon></GitHubIcon></a>
+                <a href="https://github.com/AstonKhor/indoor-rock-api" className={classes.link}><GitHubIcon></GitHubIcon></a>
                 <AccountCircleIcon></AccountCircleIcon>
                 <a href="https://www.linkedin.com/in/aston-khor/" className={classes.link}><LinkedInIcon></LinkedInIcon></a>
               </DialogActions>
