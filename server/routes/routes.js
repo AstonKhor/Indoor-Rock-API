@@ -12,6 +12,7 @@ module.exports = {
     let cleanQuery = SQL`SELECT * FROM gyms`;
     db.query(cleanQuery, (err, gyms) => {
       if (err) throw err;
+      // res.header("Content-Encoding", "gzip");
       res.end(JSON.stringify(gyms));
     })
   },
