@@ -6,8 +6,8 @@ const connection = new Pool({
   user     : config.user,
   password : config.password,
   database : config.database,
-  port: 5432,
-  ssl: config.ssl,
+  port     : config.port,
+  ssl      : config.ssl,
 })
 connection.connect();
 

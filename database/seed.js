@@ -1,4 +1,4 @@
-process.env.HEROKU=true;
+// process.env.HEROKU=true;
 const db = require('./index');
 const fs = require('fs');
 
