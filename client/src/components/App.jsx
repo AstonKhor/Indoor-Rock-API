@@ -158,7 +158,9 @@ class App extends React.Component {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        if (data.data === 'Login again') {
+          alert('Account Created');
+        }
       })
   }
 

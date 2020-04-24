@@ -258,7 +258,7 @@ const HowToUse = ({ apiKey }) => {
               <Typography variant="h5"> Request Body </Typography>
               <Typography variant="body1"> Do not provide a request body when calling this method. </Typography>
               <Typography variant="h5"> Response </Typography>
-              <Typography variant="body1"> If successful, this method returns a response body with the following structure: </Typography>
+              <Typography variant="body1"> Endpoint is still in beta and may not work</Typography>
               <Typography variant="body1">  </Typography>
             </CardContent>
           </Collapse>
