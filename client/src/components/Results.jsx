@@ -91,7 +91,7 @@ export default function Results({ selectedGyms, page, setPage }) {
                   {renderAddress(gym)}
                   {renderRating(gym)}
                 </Typography>
-                <Button size="small">Learn More</Button>
+                <Button size="small" href={gym.website}>Learn More</Button>
               </Box>
             } />
           </ListItem>
