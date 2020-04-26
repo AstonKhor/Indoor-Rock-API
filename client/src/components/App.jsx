@@ -1,5 +1,5 @@
-import React from 'react';
 import HowTo from './HowTo';
+import React from 'react';
 import Search from './Search';
 import Header from './Header';
 import Box from '@material-ui/core/Box';
@@ -9,6 +9,7 @@ import SearchParams from './SearchParams';
 import getCookie from '../methods/getCookie';
 import clearCookies from'../methods/clearCookies';
 import MapBox from './MapBox';
+import createGraph from '../methods/createBoxPlot';
 
 const AppContainer = withStyles({
   root: {
@@ -84,6 +85,8 @@ class App extends React.Component {
           selectedGyms: gyms,
           locations: locations,
         }, this.checkSession)
+        //testing
+        createGraph();
       })
       .catch((err) => {
         throw err;
