@@ -1,0 +1,9 @@
+Open database.sqlite with command
+  sqlite3 database.sqlite
+
+After cleaning the data using delete functions
+
+sqlite> .headers on
+sqlite> .mode csv
+sqlite> .output bouldersUsersData.csv
+sqlite> SELECT ascent.id, ascent.date, ascent.user_id, ascent.year, grade.usa_boulders, ascent.name, ascent.climb_type FROM ascent, grade WHERE ascent.grade_id = grade.id AND ascent.climb_type = 1;
