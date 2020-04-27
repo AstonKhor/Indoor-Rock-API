@@ -57,7 +57,7 @@ db.query('SELECT DISTINCT user_id FROM ascents;', (err, result) => {
             }
           }
           console.log(`Inserting User: ${i}/${uniqueUsers.length}`);
-          db.query(`INSERT INTO climbers (id, v0,v1,v2,v3,v4,v5,v6,v7,v8,v9,v10) VALUES (${uniqueUsers[i].user_id}, ${user.V0 || null}, ${user.V1 || null}, ${user.V2 || null}, ${user.V3 || null}, ${user.V4 || null}, ${user.V5 || null}, ${user.V6 || null}, ${user.V7 || null}, ${user.V8 || null}, ${user.V9 || null}, ${user.V10 || null})`, (err, results) => {
+          db.query(`INSERT INTO climbers (id,v0-,v0,v1,v2,v3,v4,v5,v6,v7,v8,v9,v10) VALUES (${uniqueUsers[i].user_id}, ${user['V0-'] || null}, ${user.V0 || null}, ${user.V1 || null}, ${user.V2 || null}, ${user.V3 || null}, ${user.V4 || null}, ${user.V5 || null}, ${user.V6 || null}, ${user.V7 || null}, ${user.V8 || null}, ${user.V9 || null}, ${user.V10 || null})`, (err, results) => {
             if (err) throw err;
                 console.log(`Successfully Seeded: ${i}/${uniqueUsers.length}`);
           })

@@ -85,8 +85,12 @@ class App extends React.Component {
           selectedGyms: gyms,
           locations: locations,
         }, this.checkSession)
-        //testing
-        createGraph();
+        return fetch('/graphData')
+      })
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data.rows);
+        createGraph(data.rows);
       })
       .catch((err) => {
         throw err;

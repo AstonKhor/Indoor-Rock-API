@@ -92,5 +92,13 @@ module.exports = {
   },
   patchKey: (req, res) => {
     console.log('patching key');
+  },
+  getClimbGraph: (req, res) => {
+    db.query(`SELECT * FROM climbers;`, (err, result) => {
+      // console.log('results', result);
+      res.end(JSON.stringify(result));
+    })
+
+
   }
 }
