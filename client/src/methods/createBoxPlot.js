@@ -1,6 +1,10 @@
-import * as d3 from 'd3';
+// import * as d3 from 'd3';
+import { select } from 'd3-selection';
+import { axisBottom, axisLeft } from 'd3-axis';
+import { range, max } from 'd3-array';
 import d3Tip from 'd3-tip';
-d3.tip = d3Tip;
+import { scaleBand, scaleLinear } from "d3-scale";
+// d3.tip = d3Tip;
 import data from '../data/graphData.json';
 
 const cleanData = (climbData) => {
@@ -34,17 +38,17 @@ const cleanData = (climbData) => {
     avg = avg / (3600 * 24 * 30);
     data.push({grade: grade, value: avg, count: gradeMap[grade].count});
   }
-  data.columns = ['grade', 'months'];
-  data.format = 'm';
-  data.y = "↑ Months"
 
   return data
 }
 
 const createGraph = (climbData, graph) => {
   // let data = cleanData(climbData);
-  console.log('data', data);
+  // console.log('data', data);
   climbData = data
+  data.columns = ['grade', 'months'];
+  data.format = 'm';
+  data.y = "↑ Months"
 
   let margin = ({top: 30, right: 0, bottom: 30, left: 20})
   let height = 500;
@@ -53,18 +57,18 @@ const createGraph = (climbData, graph) => {
   let colors = ['#fbb4ae', '#fbb4ae', '#b3cde3', '#b3cde3', '#ccebc5', '#ccebc5', '#decbe4', '#decbe4', '#eecbec', '#eecbec'];
   let hoverColor = '#05386B';
 
-  let x = d3.scaleBand()
-    .domain(d3.range(data.length))
+  let x = scaleBand()
+    .domain(range(data.length))
     .range([margin.left, width - margin.right])
     .padding(0.1);
-
-  let y = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.value)]).nice()
+ 
+  let y = scaleLinear()
+    .domain([0, max(data, d => d.value)]).nice()
     .range([height - margin.bottom, margin.top]);
 
   let yAxis = g => g
     .attr("transform", `translate(${margin.left},0)`)
-    .call(d3.axisLeft(y).ticks(null, data.format))
+    .call(axisLeft(y).ticks(null, data.format))
     .call(g => g.select(".domain").remove())
     .call(g => g.append("text")
         .attr("x", -margin.left)
@@ -75,9 +79,9 @@ const createGraph = (climbData, graph) => {
 
   let xAxis = g => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).tickFormat(i => data[i].grade).tickSizeOuter(0))
+    .call(axisBottom(x).tickFormat(i => data[i].grade).tickSizeOuter(0))
 
-  var tip = d3.tip()
+  var tip = d3Tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
@@ -103,7 +107,7 @@ const createGraph = (climbData, graph) => {
       );
     });
 
-  const svg = d3.select("#climbGraph").append("svg")
+  const svg = select("#climbGraph").append("svg")
     .attr("viewBox", [0, 0, width, height])
 
   svg.call(tip);

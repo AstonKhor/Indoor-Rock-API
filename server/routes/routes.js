@@ -62,7 +62,6 @@ module.exports = {
   authenticateUser: (req, res) => {
     let enteredUser = req.query.username;
     let enteredPass = req.query.password;
-    console.log(req.query);
     //protect against sql injections
     let cleanQuery = SQL`SELECT id, password, salt FROM users WHERE username = ${enteredUser};`;
     db.query(cleanQuery, (err, hashedPassword) => {
