@@ -96,12 +96,14 @@ const ClimberStats = ({ apiKey }) => {
   };
 
   useEffect(() => {
-    fetch('/graphData')
-      .then((resp) => resp.json())
-      .then((data) => {
-        createGraph(data.rows);
-        handleExpandGraphClick();
-      });
+    createGraph();
+    handleExpandGraphClick();
+    // fetch('/graphData')
+    //   .then((resp) => resp.json())
+    //   .then((data) => {
+    //     createGraph(data.rows);
+    //     handleExpandGraphClick();
+    //   });
   }, [])
 
   return (

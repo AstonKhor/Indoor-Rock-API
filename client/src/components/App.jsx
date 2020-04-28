@@ -85,7 +85,6 @@ class App extends React.Component {
           selectedGyms: gyms,
           locations: locations,
         }, this.checkSession)
-        return fetch('/graphData')
       })
       .catch((err) => {
         throw err;

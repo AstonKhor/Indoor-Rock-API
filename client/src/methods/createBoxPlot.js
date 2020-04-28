@@ -1,6 +1,7 @@
 import * as d3 from 'd3';
 import d3Tip from 'd3-tip';
 d3.tip = d3Tip;
+import data from '../data/graphData.json';
 
 const cleanData = (climbData) => {
   let data = [];
@@ -41,8 +42,10 @@ const cleanData = (climbData) => {
 }
 
 const createGraph = (climbData, graph) => {
-  let data = cleanData(climbData);
-  console.log('tip', tip);
+  // let data = cleanData(climbData);
+  console.log('data', data);
+  climbData = data
+
   let margin = ({top: 30, right: 0, bottom: 30, left: 20})
   let height = 500;
   let width = 600;
