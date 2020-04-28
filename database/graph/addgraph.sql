@@ -13,7 +13,7 @@ CREATE Table ascents (
 
 CREATE TABLE climbers (
   id INT NOT NULL,
-  v0- REAL,
+  v0m REAL,
   v0 REAL,
   v1 REAL,
   v2 REAL,

@@ -7,3 +7,13 @@ sqlite> .headers on
 sqlite> .mode csv
 sqlite> .output bouldersUsersData.csv
 sqlite> SELECT ascent.id, ascent.date, ascent.user_id, ascent.year, grade.usa_boulders, ascent.name, ascent.climb_type FROM ascent, grade WHERE ascent.grade_id = grade.id AND ascent.climb_type = 1;
+**Climb type 1 means all boulder ascents
+
+\i /Users/astonkhor/Documents/Projects/Indoor-Rock-API/database/graph/addgraph.sql
+**imports and runs the sql file
+
+COPY ascents(id,date,user_id,year,usa_boulders,name,climb_type)
+FROM '/Users/astonkhor/Documents/Projects/Indoor-Rock-API/database/graph/bouldersUsersMini.csv' DELIMITER ',' CSV HEADER;
+**COPY THE columns in 
+
+
