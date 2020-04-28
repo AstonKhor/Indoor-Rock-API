@@ -3,7 +3,7 @@ import Card from '@material-ui/core/Card';
 import clsx from 'clsx';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import { makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -17,13 +17,17 @@ import CardActions from '@material-ui/core/CardActions';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
+import { useEffect } from 'react';
+import createGraph from '../methods/createBoxPlot';
+import { FormHelperText } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: '0px 70px',
+    margin: 'auto',
   },
   card: {
     margin: '30px 45px',
+    width: '1000px',
     borderRadius: 20,
     backgroundColor: '#EDF5E1',
     color: '#05386B'
@@ -59,6 +63,26 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     color: 'inherit',
+  },
+  graph: {
+    width: '700px',
+    height: '600px',
+    margin: 'auto',
+  },
+  graphContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 'auto',
+    marginTop: '15px',
+  },
+  graphButton: {
+    backgroundColor:  '#EDF5E1',
+    color: '#05386B',
+    borderRadius: '8px',
+    fontSize: '20px',
+    marginBottom: '10px',
+    fontWeight: 'bold',
+    overflow: 'hidden',
   }
 }));
 
@@ -75,7 +99,7 @@ const HowToUse = ({ apiKey }) => {
   };
 
   return (
-    <Box className={classes.root}>      
+    <Box className={classes.root}>
       <Card className={classes.card}>
         <CardContent>
           <Typography variant="h4"> About IndoorRock API</Typography>

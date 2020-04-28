@@ -17,6 +17,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Box from '@material-ui/core/Box';
 import Divider from '@material-ui/core/Divider';
+import GraphModal from './GraphModal';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -97,6 +98,7 @@ const DialogActions = withStyles((theme) => ({
 export default function Header({ apiKey, username, authenticateUser, createAccount, logout }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [graphOpen, setGraphOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [learnModalOpen, setLearnModal] = React.useState(false);
   
@@ -116,17 +118,25 @@ export default function Header({ apiKey, username, authenticateUser, createAccou
     setAnchorEl(null);
   };
 
-  const handleClickOpen = () => {
+  const handleLoginOpen = () => {
     setOpen(true);
   };
 
-  const handleClickClose = () => {
+  const handleLoginClose = () => {
     setOpen(false);
+  };
+
+  const handleGraphOpen = () => {
+    setGraphOpen(true);
+  };
+
+  const handleGraphClose = () => {
+    setGraphOpen(false);
   };
 
   let allowLogin = (user) => {
     if (user === 'Guest') {
-      return <Button color="inherit" onClick={handleClickOpen}>Login</Button>
+      return <Button color="inherit" onClick={handleLoginOpen}>Login</Button>
     } else {
       return <Button color="inherit" onClick={handleAccountClick}>{username}</Button>
     }
@@ -172,7 +182,7 @@ export default function Header({ apiKey, username, authenticateUser, createAccou
         </Typography>
         {allowLogin(username)}
         <AccountMenu apiKey={apiKey} anchorEl={anchorEl} handleAccountClose={handleAccountClose} logout={logout}></AccountMenu>
-        <LoginModal open={open} handleClose={handleClickClose} authenticateUser={authenticateUser} createAccount={createAccount}/>
+        <LoginModal open={open} handleClose={handleLoginClose} authenticateUser={authenticateUser} createAccount={createAccount}/>
       </Toolbar>
     </AppBar>
   );

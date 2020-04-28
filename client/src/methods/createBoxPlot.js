@@ -32,7 +32,7 @@ const cleanData = (climbData) => {
     let avg = gradeMap[grade].sum / gradeMap[grade].count;
     //change from s to months
     avg = avg / (3600 * 24 * 30);
-    data.push({grade: grade, value: avg});
+    data.push({grade: grade, value: avg, count: gradeMap[grade].count});
   }
   data.columns = ['grade', 'months'];
   data.format = 'm';
@@ -41,15 +41,15 @@ const cleanData = (climbData) => {
   return data
 }
 
-const createGraph = (climbData) => {
+const createGraph = (climbData, graph) => {
   let data = cleanData(climbData);
   console.log('tip', tip);
   let margin = ({top: 30, right: 0, bottom: 30, left: 20})
   let height = 500;
   let width = 600;
   let coloridx = 0
-  let colors = ['#fbb4ae', '#b3cde3', '#b3cde3', '#b3cde3', '#ccebc5', '#ccebc5', '#decbe4', '#decbe4', '#f584ef', '#f584ef'];
-  let hoverColor = '#EDF5E1'
+  let colors = ['#fbb4ae', '#fbb4ae', '#b3cde3', '#b3cde3', '#ccebc5', '#ccebc5', '#decbe4', '#decbe4', '#eecbec', '#eecbec'];
+  let hoverColor = '#05386B';
 
   let x = d3.scaleBand()
     .domain(d3.range(data.length))
@@ -79,11 +79,36 @@ const createGraph = (climbData) => {
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-      return "<strong>Months:</strong> <span style='color:red'>" + d.value.toFixed(2) + "</span>";
-    })
+      return (
+        `<div style="font-weight: bold; padding: 12px; background: #e3e3e3; border-radius: 5px;">
+          <div style="font-size: 18px; text-align: center">
+          ${d.grade.toUpperCase()}
+          </div>
+          <div>
+            <span style='font-weight: bold;'>
+              Months:
+            </span> 
+            <span style='color: #05386B; text-decoration: underline; font-weight: bold;'>
+              ${d.value.toFixed(2)}
+            </span>
+          </div>
+          <div>
+            ${d.count} Climbs
+          </div>
+        </div>
+        <div style="content: ''; display: block; width: 0; height: 0; position: absolute; border-top: 8px solid #e3e3e3; border-left: 8px solid transparent; border-right: 8px solid transparent; left: 43%; bottom: -8px;">
+        </div>`
+      );
+    });
+  let climbGraph = document.getElementById('climbGraph');
+  console.log('method', climbGraph);
+  // graph.style.width = '400px';
 
-  const svg = d3.select("body").append("svg")
-    .attr("viewBox", [0, 0, width, height]);
+  const svg = d3.select("#climbGraph").append("svg")
+    .attr("viewBox", [0, 0, width, height])
+    // .attr("style", 'z-index: 100000000');
+
+  // const svg = graph.append('svg')
 
   svg.call(tip);
 
@@ -98,7 +123,7 @@ const createGraph = (climbData) => {
       .attr("width", x.bandwidth())
       // .on('mouseover', tip.show)
       .on('mouseover', function(pair, idx, bars) {
-        bars[idx].style.fill = 'black';
+        bars[idx].style.fill = hoverColor;
         tip.show.call(this, pair, idx, bars);
       })
       .on('mouseout', function(pair, idx, bars) {

@@ -9,7 +9,7 @@ import SearchParams from './SearchParams';
 import getCookie from '../methods/getCookie';
 import clearCookies from'../methods/clearCookies';
 import MapBox from './MapBox';
-import createGraph from '../methods/createBoxPlot';
+import ClimberStats from './ClimberStats';
 
 const AppContainer = withStyles({
   root: {
@@ -86,11 +86,6 @@ class App extends React.Component {
           locations: locations,
         }, this.checkSession)
         return fetch('/graphData')
-      })
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data.rows);
-        createGraph(data.rows);
       })
       .catch((err) => {
         throw err;
@@ -230,6 +225,7 @@ class App extends React.Component {
     return (
       <AppContainer>
         <Header apiKey={this.state.key} username={this.state.user} authenticateUser={this.authenticateUser} createAccount={this.createAccount} logout={this.logout}/>
+        <ClimberStats></ClimberStats>
         <HowTo apiKey={this.state.key}/>
         <BodyContainer>
           <SearchContainer>
