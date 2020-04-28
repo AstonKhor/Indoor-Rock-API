@@ -17,9 +17,6 @@ import CardActions from '@material-ui/core/CardActions';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
-import { useEffect } from 'react';
-import createGraph from '../methods/createBoxPlot';
-import { FormHelperText } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {

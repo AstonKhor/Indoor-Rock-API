@@ -17,7 +17,6 @@ const cleanData = (climbData) => {
     'v8': {sum: 0, count: 0},
     'v9': {sum: 0, count: 0},
   };
-  // var meanGenerator = d3.randomUniform(10);
   for (let i = 0; i < climbData.length; i++) {
     for (let grade in gradeMap) {
       if (climbData[i][grade] && climbData[i][grade] !== NaN && typeof climbData[i][grade] === 'number') {
@@ -100,15 +99,9 @@ const createGraph = (climbData, graph) => {
         </div>`
       );
     });
-  let climbGraph = document.getElementById('climbGraph');
-  console.log('method', climbGraph);
-  // graph.style.width = '400px';
 
   const svg = d3.select("#climbGraph").append("svg")
     .attr("viewBox", [0, 0, width, height])
-    // .attr("style", 'z-index: 100000000');
-
-  // const svg = graph.append('svg')
 
   svg.call(tip);
 
@@ -121,7 +114,6 @@ const createGraph = (climbData, graph) => {
       .attr("y", d => y(d.value))
       .attr("height", d => y(0) - y(d.value))
       .attr("width", x.bandwidth())
-      // .on('mouseover', tip.show)
       .on('mouseover', function(pair, idx, bars) {
         bars[idx].style.fill = hoverColor;
         tip.show.call(this, pair, idx, bars);

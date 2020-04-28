@@ -15,9 +15,6 @@ import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import Box from '@material-ui/core/Box';
-import Divider from '@material-ui/core/Divider';
-import GraphModal from './GraphModal';
 
 
 const useStyles = makeStyles((theme) => ({
