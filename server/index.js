@@ -25,6 +25,6 @@ app.get('/login', routes.authenticateUser)
 
 app.post('/user', routes.createUser);
 
-app.get('/graphData', routes.getClimbGraph);
+// app.get('/graphData', routes.getClimbGraph);
 
 app.listen(port, () => { console.log(`Now listening on port ${port}`)})
