@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '20px',
     paddingRight: '20px',
     transitionDuration: '1s',
+    overflow: 'hidden',
   },
   moreInfo: {
     color: '#05386B',
@@ -84,13 +85,20 @@ const useStyles = makeStyles((theme) => ({
 const ClimberStats = ({ apiKey }) => {
   const classes = useStyles();
   const [expandedGraph, setExpandedGraph] = React.useState(false);
+  const [height, setHeight] = React.useState(145);
+  
 
   const handleExpandGraphClick = () => {
-    var x = document.getElementById("graphBody");
+    let graphBody = document.getElementById("graphBody");
+    let root = document.getElementById('root');
     if (expandedGraph) {
-      x.style.display = "block";
+      root.style.height = '1100px'
+      graphBody.style.display = "block";
     } else {
-      x.style.display = "none";
+      root.style.height = '145px'
+      setTimeout(() => {
+        graphBody.style.display = "none";
+      }, 900)
     }
     setExpandedGraph(!expandedGraph);
   };
@@ -98,16 +106,10 @@ const ClimberStats = ({ apiKey }) => {
   useEffect(() => {
     createGraph();
     handleExpandGraphClick();
-    // fetch('/graphData')
-    //   .then((resp) => resp.json())
-    //   .then((data) => {
-    //     createGraph(data.rows);
-    //     handleExpandGraphClick();
-    //   });
   }, [])
 
   return (
-    <Card class={classes.card}>
+    <Card id="root" class={classes.card}>
       <CardContent>
         <Typography variant="h4">
           Climbing Stats
