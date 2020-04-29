@@ -8,6 +8,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import PeopleCardFooter from '@mui-treasury/components/cardFooter/people';
 import TextInfoContent from '@mui-treasury/components/content/textInfo';
 
+
+//incomplete component not yet implemented
+
 const LearnMoreModal = () => {
   return (
     <Card className={cx(cardStyles.root, fadeShadowStyles.root)}>

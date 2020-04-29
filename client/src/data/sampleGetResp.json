@@ -1,0 +1,48 @@
+{
+  "command": "SELECT",
+  "rowCount": 1572,
+  "rows": [
+    {
+      "id": 1,
+      "gymname": "Climb Bentonville",
+      "link": "https://www.mountainproject.com/gym/117236847/climb-bentonville",
+      "country": "United States",
+      "region": "Arkansas",
+      "subregion": "Bentonville",
+      "website": "https://www.climbbentonville.com/",
+      "phone": "4793268521",
+      "gymaddress": " 801 SW 14th Street, Bentonville AR 72712 ",
+      "rating": "4.0",
+      "description": null,
+      "poster": null
+    },
+    {
+      "id": 3,
+      "gymname": "Birmingham Boulders",
+      "link": "https://www.mountainproject.com/gym/117236870/birmingham-boulders",
+      "country": "United States",
+      "region": "Alabama",
+      "subregion": "Birmingham",
+      "website": "https://www.boulderingauthority.com/bhamboulders",
+      "phone": "205-201-4616",
+      "gymaddress": " 136 INDUSTRIAL DRIVE BIRMINGHAM, AL 35211 ",
+      "rating": "3.5",
+      "description": null,
+      "poster": null
+    },
+    {
+      "id": 7,
+      "gymname": "Campus Recreation Center",
+      "link": "https://www.mountainproject.com/gym/107140462/campus-recreation-center",
+      "country": "United States",
+      "region": "Alabama",
+      "subregion": "Birmingham",
+      "website": "http://studentaffairs.uab.edu/CampusRecreation/climbingwall.html",
+      "phone": "(205) 934-8224",
+      "gymaddress": " University of Alabama at Birmingham, 1501 University Blvd, Birmingham Alabama 35294 ",
+      "rating": "2.0",
+      "description": null,
+      "poster": null
+    }
+  ]
+}

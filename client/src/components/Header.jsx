@@ -55,6 +55,22 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'underline',
     fontWeight: 'bold',
     margin: 6
+  },
+  dialogHead: {
+    backgroundColor: '#EDF5E1',
+    color: '#05386B',
+    padding: '15px 20px 20px 10px',
+  },
+  dialogBody: {
+    backgroundColor: '#EDF5E1',
+    color: '#05386B',
+    padding: '0px 15px',
+  },
+  dialogFoot: {
+    backgroundColor: '#EDF5E1',
+    padding: '5px 10px 10px 0px',
+    display: 'flex',
+    justifyContent: 'flex-end',
   }
 }));
 
@@ -95,7 +111,6 @@ const DialogActions = withStyles((theme) => ({
 export default function Header({ apiKey, username, authenticateUser, createAccount, logout }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const [graphOpen, setGraphOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [learnModalOpen, setLearnModal] = React.useState(false);
   
@@ -123,14 +138,6 @@ export default function Header({ apiKey, username, authenticateUser, createAccou
     setOpen(false);
   };
 
-  const handleGraphOpen = () => {
-    setGraphOpen(true);
-  };
-
-  const handleGraphClose = () => {
-    setGraphOpen(false);
-  };
-
   let allowLogin = (user) => {
     if (user === 'Guest') {
       return <Button color="inherit" onClick={handleLoginOpen}>Login</Button>
@@ -148,11 +155,11 @@ export default function Header({ apiKey, username, authenticateUser, createAccou
             &ensp;By Aston Khor
             <Button onClick={openLearnModel} className={classes.learnMore}>Learn More</Button>
             <Dialog onClose={closeLearnModal} aria-labelledby="customized-dialog-title" open={learnModalOpen}>
-              <DialogTitle id="customized-dialog-title" onClose={closeLearnModal}>
-                Hi I'm Aston!
+              <DialogTitle id="customized-dialog-title" onClose={closeLearnModal} class={classes.dialogHead}>
+                &ensp;Hi, I'm Aston!
                 <Avatar alt="Aston Khor" src="AstonKhor.jpg" className={classes.largeAvatar}></Avatar>
               </DialogTitle>
-              <DialogContent dividers>
+              <DialogContent dividers class={classes.dialogBody}>
                 <Typography gutterBottom>
                   Indoor Rock API is a small project of mine to create an open API that serves up scraped indoor gym data. I wanted to challenge myself to create the application with new technologies/techniques such as:
                   <Typography component="ul">
@@ -166,12 +173,13 @@ export default function Header({ apiKey, username, authenticateUser, createAccou
                     <Typography component="li">Page Speed Optimization - Compression</Typography>
                     <Typography component="li">Page Speed Optimization - Server Caching</Typography>
                   </Typography>
+                  As of 4/28/20 I've added a graph correlating climbing grade vs time to move up a grade.
                 </Typography>
               </DialogContent>
-              <DialogActions>
+              <DialogActions class={classes.dialogFoot}>
                 <a href="mailto:khoraston@gmail.com" className={classes.link}><EmailIcon></EmailIcon></a>
                 <a href="https://github.com/AstonKhor/indoor-rock-api" className={classes.link}><GitHubIcon></GitHubIcon></a>
-                <AccountCircleIcon></AccountCircleIcon>
+                <a href="https://astonk.com" className={classes.link}><AccountCircleIcon></AccountCircleIcon></a>
                 <a href="https://www.linkedin.com/in/aston-khor/" className={classes.link}><LinkedInIcon></LinkedInIcon></a>
               </DialogActions>
             </Dialog>

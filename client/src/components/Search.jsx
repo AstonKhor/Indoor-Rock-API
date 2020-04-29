@@ -27,7 +27,7 @@ const Search = ({ addParam, params, locations }) => {
   const classes = useStyles();
   let renderList = () => {
     if (!params.country) {
-      let countries = Object.keys(locations);
+      let countries = Object.keys(locations).sort();
       return (<Container>
         <Typography variant="h5" className={classes.listTitle}>Country</Typography>
         {countries.map((country)=> (
@@ -41,7 +41,7 @@ const Search = ({ addParam, params, locations }) => {
         ))}
       </Container>)
     } else if (!params.region) {
-      let regions = Object.keys(locations[params.country]);
+      let regions = Object.keys(locations[params.country]).sort();
       return (<Container>
         <Typography variant="h5" className={classes.listTitle}>Region</Typography>
         {regions.map((region)=> (
@@ -55,7 +55,7 @@ const Search = ({ addParam, params, locations }) => {
         ))}
       </Container>)
     } else if (!params.subregion) {
-      let subregions = Object.keys(locations[params.country][params.region]);
+      let subregions = Object.keys(locations[params.country][params.region]).sort();
       return (<Container>
         <Typography variant="h5" className={classes.listTitle}>SubRegion</Typography>
         {subregions.map((subregion)=> (
