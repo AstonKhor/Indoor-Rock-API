@@ -149,7 +149,7 @@ const ClimberStats = ({ apiKey }) => {
               Take Away
             </Typography>
             <Typography variant="body1">
-              Grades progressively take longer to improve from. As you progress in climbing the amount of energy/time spent to improve a single grade appears to increase.
+              Grades progressively take longer to improve from. As you progress in climbing the amount of energy/time spent to improve a single grade appears to increase. Completely expected! BUT it's now backed by data and a kid colored graph.
             </Typography>
             <br/>
           </Box>
