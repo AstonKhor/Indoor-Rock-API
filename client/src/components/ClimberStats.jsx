@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Card from '@material-ui/core/Card';
 import clsx from 'clsx';
 import CardContent from '@material-ui/core/CardContent';
@@ -8,7 +8,6 @@ import IconButton from '@material-ui/core/IconButton';
 import CardActions from '@material-ui/core/CardActions';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Box from '@material-ui/core/Box';
-import { useEffect } from 'react';
 import createGraph from '../methods/createBoxPlot';
 
 const useStyles = makeStyles((theme) => ({
@@ -85,8 +84,6 @@ const useStyles = makeStyles((theme) => ({
 const ClimberStats = ({ apiKey }) => {
   const classes = useStyles();
   const [expandedGraph, setExpandedGraph] = React.useState(false);
-  const [height, setHeight] = React.useState(145);
-  
 
   const handleExpandGraphClick = () => {
     let graphBody = document.getElementById("graphBody");

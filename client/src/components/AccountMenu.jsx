@@ -11,9 +11,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 let useStyles = makeStyles({
-  root: {
-
-  },
   collapse: {
     position: 'absolute',
     width: '550px',
@@ -21,9 +18,6 @@ let useStyles = makeStyles({
     left: '50%',
     top: '10%',
   },
-  copyKey: {
-    // backgroundColor: '#ffec99',
-  }
 })
 
 
