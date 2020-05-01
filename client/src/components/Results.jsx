@@ -1,13 +1,11 @@
 import React from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Pagination from '@material-ui/lab/Pagination';
-import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Rating from '@material-ui/lab/Rating';
-import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Box from '@material-ui/core/Box';
 
@@ -91,7 +89,7 @@ export default function Results({ selectedGyms, page, setPage }) {
                   {renderAddress(gym)}
                   {renderRating(gym)}
                 </Typography>
-                <Button size="small" href={gym.website}>Learn More</Button>
+                <a href={gym.website}>Learn More</a>
               </Box>
             } />
           </ListItem>
