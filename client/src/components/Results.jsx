@@ -82,10 +82,10 @@ export default function Results({ selectedGyms, page, setPage }) {
       <Pagination className={classes.pagination}count={Math.ceil(selectedGyms.length / 10)} page={page} onChange={setPage}/>
       {pageGyms.map((gym) => (
         <React.Fragment>
-          <ListItem button key={`${gym.id}${gym.country}`}>
+          <ListItem div key={`${gym.id}${gym.country}`}>
             <ListItemText primary={gym.gymname} secondary={
               <Box className={classes.listSecondaryContainer}>
-                <Typography className={classes.pos} color="textSecondary" component="span">
+                <Typography color="textSecondary" component="span">
                   {renderWebsite(gym)}
                   {renderPhone(gym)}
                   {renderAddress(gym)}
