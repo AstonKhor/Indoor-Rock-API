@@ -18,7 +18,10 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 20,
     padding: 10,
     backgroundColor: '#EDF5E1',
-    color: '#05386B'
+    color: '#05386B',
+    [theme.breakpoints.down('md')]: {
+      margin: '0px 10px'
+    },
   },
   pagination: {
     display: 'flex',

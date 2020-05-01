@@ -12,11 +12,11 @@ const useStyles = makeStyles({
     marginBottom: 10,
     padding: 10,
     backgroundColor: '#EDF5E1',
-    color: '#05386B'
+    color: '#05386B',
   },
   listItem: {
-    fontWeight: 'bold'
-,  }
+    fontWeight: 'bold', 
+  },
 });
 
 const ParamContainer = withStyles({

@@ -11,9 +11,6 @@ import Box from '@material-ui/core/Box';
 import createGraph from '../methods/createBoxPlot';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    margin: 'auto',
-  },
   card: {
     margin: 'auto',
     marginTop: '15px',
@@ -25,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: '20px',
     transitionDuration: '1s',
     overflow: 'hidden',
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
   },
   moreInfo: {
     color: '#05386B',

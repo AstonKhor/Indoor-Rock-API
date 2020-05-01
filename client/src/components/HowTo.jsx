@@ -22,13 +22,21 @@ import sampleGet from '../data/sampleGetResp.json';
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: 'auto',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+    },
   },
   card: {
     margin: '30px 45px',
     width: '1000px',
     borderRadius: 20,
     backgroundColor: '#EDF5E1',
-    color: '#05386B'
+    color: '#05386B',
+    [theme.breakpoints.down('md')]: {
+      margin: '0px 10px',
+      marginTop: '10px',
+      width: window.innerWidth - 20,
+    },
   },
   moreInfo: {
     color: '#05386B',
@@ -41,6 +49,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontWeight: 'bold',
     backgroundColor: '#e3e3e3',
+    [theme.breakpoints.down('md')]: {
+      overflow: 'hidden',
+      lineHeight: '30px',
+    },
   },
   expand: {
     color: '#05386B',
@@ -52,35 +64,8 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
-  largeAvatar: {
-    width: 100,
-    height: 100,
-    float: 'right',
-    right: theme.spacing(1),
-    top: theme.spacing(1),
-  },
   link: {
     color: 'inherit',
-  },
-  graph: {
-    width: '700px',
-    height: '600px',
-    margin: 'auto',
-  },
-  graphContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    margin: 'auto',
-    marginTop: '15px',
-  },
-  graphButton: {
-    backgroundColor:  '#EDF5E1',
-    color: '#05386B',
-    borderRadius: '8px',
-    fontSize: '20px',
-    marginBottom: '10px',
-    fontWeight: 'bold',
-    overflow: 'hidden',
   },
   getResp: {
     height: '636px',

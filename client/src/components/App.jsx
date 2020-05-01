@@ -33,13 +33,17 @@ const BodyContainer = withStyles({
   }
 })(Box);
 
-const SearchContainer = withStyles({
+const SearchContainer = withStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     width: 275,
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      marginLeft: 10,
+    },
   }
-})(Box);
+}))(Box);
 
 class App extends React.Component {
   constructor(props) {

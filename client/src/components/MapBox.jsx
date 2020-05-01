@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import mapboxgl from 'mapbox-gl';
  
-let useStyles = makeStyles({
+let useStyles = makeStyles((theme) => ({
   root: {
     width: 600,
     margin: 0,
@@ -13,8 +13,11 @@ let useStyles = makeStyles({
     position: 'sticky',
     top: '25px',
     borderRadius: 25,
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
   }
-})
+}))
 
 const MapBox = () => {
   const classes = useStyles();
