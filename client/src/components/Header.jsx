@@ -15,6 +15,8 @@ import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import Slide from '@material-ui/core/Slide';
+import Divider from '@material-ui/core/Divider';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -30,7 +32,6 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     margin: '-65px -10px -85px -25px',
-
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -45,9 +46,8 @@ const useStyles = makeStyles((theme) => ({
     padding: 8,
   },
   largeAvatar: {
-    width: 200,
-    height: 200,
-    float: 'right',
+    width: 150,
+    height: 150,
   },
   link: {
     color: 'inherit',
@@ -63,19 +63,37 @@ const useStyles = makeStyles((theme) => ({
   dialogHead: {
     backgroundColor: '#EDF5E1',
     color: '#05386B',
-    padding: '15px 20px 20px 10px',
+    padding: '30px 30px 20px 30px',
   },
   dialogBody: {
     backgroundColor: '#EDF5E1',
     color: '#05386B',
-    padding: '0px 15px',
+    padding: '0px 30px',
   },
   dialogFoot: {
     backgroundColor: '#EDF5E1',
     padding: '5px 10px 10px 0px',
     display: 'flex',
     justifyContent: 'flex-end',
-  }
+  },
+  learnHeading: {
+    fontWeight: 900,
+  },
+  learnBody: {
+    color: 'black',
+    padding: '0 10px',
+    lineHeight: 1.8,
+  },
+  headLabel: {
+    fontSize: '45px',
+    fontWeight: 900,
+    textDecoration: 'underline',
+    color: '#4f4f4f',
+  },
+  // divider: {
+  //   marginLeft: '12px',
+  //   marginRight: '12px',
+  // }
 }));
 
 const styles = (theme) => ({
@@ -88,6 +106,10 @@ const styles = (theme) => ({
     alignItems: 'center',
     justifyContent: 'space-between',
   }
+});
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
 });
 
 const DialogTitle = withStyles(styles)((props) => {
@@ -158,13 +180,19 @@ export default function Header({ apiKey, username, authenticateUser, createAccou
           <Typography variant="body1" component="span" className={classes.by}>
             &ensp;By Aston Khor
             <Button onClick={openLearnModel} className={classes.learnMore}>Learn More</Button>
-            <Dialog onClose={closeLearnModal} aria-labelledby="customized-dialog-title" open={learnModalOpen}>
+            <Dialog onClose={closeLearnModal} TransitionComponent={Transition} aria-labelledby="customized-dialog-title" open={learnModalOpen}>
               <DialogTitle id="customized-dialog-title" onClose={closeLearnModal} class={classes.dialogHead}>
-                &ensp;Hi, I'm Aston!
                 <Avatar alt="Aston Khor" src="./images/AstonKhor.jpg" className={classes.largeAvatar}></Avatar>
+                <Typography className={classes.headLabel} variant="overline" gutterBottom>
+                  Aston Khor
+                </Typography>
+                <Divider className={classes.divider} light />
               </DialogTitle>
               <DialogContent dividers class={classes.dialogBody}>
-                <Typography gutterBottom>
+                <Typography className={classes.learnHeading} variant="h4" gutterBottom>
+                  Indoor Rock API
+                </Typography>
+                <Typography className={classes.learnBody} gutterBottom>
                   Indoor Rock API is a small project of mine to create an open API that serves up scraped indoor gym data. I wanted to challenge myself to create the application with new technologies/techniques such as:
                   <Typography component="ul">
                     <Typography component="li">WebScraping</Typography>
