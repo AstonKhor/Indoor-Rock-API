@@ -21,14 +21,12 @@ import sampleGet from '../data/sampleGetResp.json';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: 'auto',
     [theme.breakpoints.down('md')]: {
       width: '100%',
     },
   },
   card: {
-    margin: '30px 45px',
-    width: '1000px',
+    width: '825px',
     borderRadius: 20,
     backgroundColor: '#EDF5E1',
     color: '#05386B',

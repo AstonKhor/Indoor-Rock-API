@@ -8,10 +8,9 @@ let useStyles = makeStyles((theme) => ({
     margin: 0,
   },
   map: {
+    marginLeft: '30px',
     width: 600,
-    height: 450,
-    position: 'sticky',
-    top: '25px',
+    height: 466,
     borderRadius: 25,
     [theme.breakpoints.down('md')]: {
       display: 'none',

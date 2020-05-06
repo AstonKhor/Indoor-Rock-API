@@ -14,13 +14,15 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    margin: '0px 10px 10px',
+    margin: '0px 10px 10px 20px',
+    width: '400px',
     borderRadius: 20,
     padding: 10,
     backgroundColor: '#EDF5E1',
     color: '#05386B',
     [theme.breakpoints.down('md')]: {
-      margin: '0px 10px'
+      margin: '0px 10px',
+      width: 'auto'
     },
   },
   pagination: {

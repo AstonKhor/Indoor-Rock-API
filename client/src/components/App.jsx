@@ -17,7 +17,17 @@ const AppContainer = withStyles({
     paddingBottom: 10,
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'white',
+    backgroundColor: '#fffef7',
+  }
+})(Box);
+
+const BannerContainer = withStyles({
+  root: {
+    margin: '30px 70px',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
   }
 })(Box);
 
@@ -229,14 +239,16 @@ class App extends React.Component {
       <AppContainer>
         <Header apiKey={this.state.key} username={this.state.user} authenticateUser={this.authenticateUser} createAccount={this.createAccount} logout={this.logout}/>
         <ClimberStats></ClimberStats>
-        <HowTo apiKey={this.state.key}/>
+        <BannerContainer>
+          <HowTo apiKey={this.state.key}/>
+          <MapBox></MapBox>
+        </BannerContainer>
         <BodyContainer>
           <SearchContainer>
             <SearchParams params={this.state.searchParams} clearParams={this.clearParams}/>
             <Search addParam={this.addParam} params={this.state.searchParams} locations={this.state.locations}></Search>
           </SearchContainer>
           <Results selectedGyms={this.state.selectedGyms} page={this.state.resultPage} setPage={this.setPage}/>
-          <MapBox></MapBox>
         </BodyContainer>
       </AppContainer>
     )

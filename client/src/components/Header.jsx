@@ -28,6 +28,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  logo: {
+    margin: '-65px -10px -85px -25px',
+
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -150,14 +154,14 @@ export default function Header({ apiKey, username, authenticateUser, createAccou
     <AppBar position="static" className={classes.root}>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-          IndoorRock API
+          <img src="./images/LogoFull.png" className={classes.logo}></img>
           <Typography variant="body1" component="span" className={classes.by}>
             &ensp;By Aston Khor
             <Button onClick={openLearnModel} className={classes.learnMore}>Learn More</Button>
             <Dialog onClose={closeLearnModal} aria-labelledby="customized-dialog-title" open={learnModalOpen}>
               <DialogTitle id="customized-dialog-title" onClose={closeLearnModal} class={classes.dialogHead}>
                 &ensp;Hi, I'm Aston!
-                <Avatar alt="Aston Khor" src="AstonKhor.jpg" className={classes.largeAvatar}></Avatar>
+                <Avatar alt="Aston Khor" src="./images/AstonKhor.jpg" className={classes.largeAvatar}></Avatar>
               </DialogTitle>
               <DialogContent dividers class={classes.dialogBody}>
                 <Typography gutterBottom>
